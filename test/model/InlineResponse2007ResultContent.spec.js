@@ -9,6 +9,17 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 (function(root, factory) {
@@ -54,38 +65,38 @@
       //expect(instance).to.be.a(ApChallengeMicroservice.InlineResponse2007ResultContent);
     });
 
-    it('should have the property updatedAt (base name: "updatedAt")', function() {
-      // uncomment below and update the code to test the property updatedAt
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
       //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
       //expect(instance).to.be();
     });
 
-    it('should have the property createdAt (base name: "createdAt")', function() {
-      // uncomment below and update the code to test the property createdAt
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
       //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
       //expect(instance).to.be();
     });
 
-    it('should have the property createdBy (base name: "createdBy")', function() {
-      // uncomment below and update the code to test the property createdBy
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property updatedBy (base name: "updatedBy")', function() {
-      // uncomment below and update the code to test the property updatedBy
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property technologies (base name: "technologies")', function() {
-      // uncomment below and update the code to test the property technologies
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
       //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
+      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property startDate (base name: "startDate")', function() {
+      // uncomment below and update the code to test the property startDate
+      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property endDate (base name: "endDate")', function() {
+      // uncomment below and update the code to test the property endDate
       //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
       //expect(instance).to.be();
     });
@@ -102,140 +113,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property reviewType (base name: "reviewType")', function() {
-      // uncomment below and update the code to test the property reviewType
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property forumId (base name: "forumId")', function() {
-      // uncomment below and update the code to test the property forumId
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property numSubmissions (base name: "numSubmissions")', function() {
-      // uncomment below and update the code to test the property numSubmissions
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
     it('should have the property numRegistrants (base name: "numRegistrants")', function() {
       // uncomment below and update the code to test the property numRegistrants
       //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
       //expect(instance).to.be();
     });
 
-    it('should have the property registrationStartDate (base name: "registrationStartDate")', function() {
-      // uncomment below and update the code to test the property registrationStartDate
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property registrationEndDate (base name: "registrationEndDate")', function() {
-      // uncomment below and update the code to test the property registrationEndDate
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property checkpointSubmissionEndDate (base name: "checkpointSubmissionEndDate")', function() {
-      // uncomment below and update the code to test the property checkpointSubmissionEndDate
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property submissionEndDate (base name: "submissionEndDate")', function() {
-      // uncomment below and update the code to test the property submissionEndDate
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property platforms (base name: "platforms")', function() {
-      // uncomment below and update the code to test the property platforms
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property numberOfCheckpointPrizes (base name: "numberOfCheckpointPrizes")', function() {
-      // uncomment below and update the code to test the property numberOfCheckpointPrizes
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property totalCheckpointPrize (base name: "totalCheckpointPrize")', function() {
-      // uncomment below and update the code to test the property totalCheckpointPrize
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property totalPrize (base name: "totalPrize")', function() {
-      // uncomment below and update the code to test the property totalPrize
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property isPrivate (base name: "isPrivate")', function() {
-      // uncomment below and update the code to test the property isPrivate
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property upcomingPhase (base name: "upcomingPhase")', function() {
-      // uncomment below and update the code to test the property upcomingPhase
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property projectId (base name: "projectId")', function() {
-      // uncomment below and update the code to test the property projectId
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property projectName (base name: "projectName")', function() {
-      // uncomment below and update the code to test the property projectName
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property currentPhases (base name: "currentPhases")', function() {
-      // uncomment below and update the code to test the property currentPhases
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property userId (base name: "userId")', function() {
-      // uncomment below and update the code to test the property userId
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property handle (base name: "handle")', function() {
-      // uncomment below and update the code to test the property handle
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property isTask (base name: "isTask")', function() {
-      // uncomment below and update the code to test the property isTask
-      //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property userDetails (base name: "userDetails")', function() {
-      // uncomment below and update the code to test the property userDetails
+    it('should have the property rounds (base name: "rounds")', function() {
+      // uncomment below and update the code to test the property rounds
       //var instane = new ApChallengeMicroservice.InlineResponse2007ResultContent();
       //expect(instance).to.be();
     });

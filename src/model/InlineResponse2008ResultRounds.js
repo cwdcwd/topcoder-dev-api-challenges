@@ -9,6 +9,17 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 (function(root, factory) {
@@ -68,7 +79,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
+        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
       if (data.hasOwnProperty('registrationStartAt')) {
         obj['registrationStartAt'] = ApiClient.convertToType(data['registrationStartAt'], 'Date');
@@ -92,14 +103,14 @@
         obj['status'] = ApiClient.convertToType(data['status'], 'String');
       }
       if (data.hasOwnProperty('forumId')) {
-        obj['forumId'] = ApiClient.convertToType(data['forumId'], 'Number');
+        obj['forumId'] = ApiClient.convertToType(data['forumId'], 'Integer');
       }
     }
     return obj;
   }
 
   /**
-   * @member {Number} id
+   * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
   /**
@@ -136,7 +147,7 @@
    */
   exports.prototype['status'] = undefined;
   /**
-   * @member {Number} forumId
+   * @member {Integer} forumId
    */
   exports.prototype['forumId'] = undefined;
 

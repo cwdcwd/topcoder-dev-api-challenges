@@ -9,23 +9,34 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse200ResultSubmissions'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse200ResultSubmissions'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.ApChallengeMicroservice) {
       root.ApChallengeMicroservice = {};
     }
-    root.ApChallengeMicroservice.InlineResponse200ResultContent = factory(root.ApChallengeMicroservice.ApiClient, root.ApChallengeMicroservice.InlineResponse200ResultSubmissions);
+    root.ApChallengeMicroservice.InlineResponse200ResultContent = factory(root.ApChallengeMicroservice.ApiClient);
   }
-}(this, function(ApiClient, InlineResponse200ResultSubmissions) {
+}(this, function(ApiClient) {
   'use strict';
 
 
@@ -53,28 +64,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   };
 
   /**
@@ -88,228 +77,74 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('submissions')) {
-        obj['submissions'] = ApiClient.convertToType(data['submissions'], [InlineResponse200ResultSubmissions]);
+      if (data.hasOwnProperty('oldRating')) {
+        obj['oldRating'] = ApiClient.convertToType(data['oldRating'], 'String');
       }
-      if (data.hasOwnProperty('updatedAt')) {
-        obj['updatedAt'] = ApiClient.convertToType(data['updatedAt'], 'Date');
+      if (data.hasOwnProperty('newRating')) {
+        obj['newRating'] = ApiClient.convertToType(data['newRating'], 'String');
       }
-      if (data.hasOwnProperty('createdAt')) {
-        obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Date');
+      if (data.hasOwnProperty('finalScore')) {
+        obj['finalScore'] = ApiClient.convertToType(data['finalScore'], 'String');
       }
-      if (data.hasOwnProperty('createdBy')) {
-        obj['createdBy'] = ApiClient.convertToType(data['createdBy'], 'String');
+      if (data.hasOwnProperty('placement')) {
+        obj['placement'] = ApiClient.convertToType(data['placement'], 'String');
       }
-      if (data.hasOwnProperty('updatedBy')) {
-        obj['updatedBy'] = ApiClient.convertToType(data['updatedBy'], 'String');
+      if (data.hasOwnProperty('passedReview')) {
+        obj['passedReview'] = ApiClient.convertToType(data['passedReview'], 'Integer');
       }
-      if (data.hasOwnProperty('technologies')) {
-        obj['technologies'] = ApiClient.convertToType(data['technologies'], 'String');
+      if (data.hasOwnProperty('challengeId')) {
+        obj['challengeId'] = ApiClient.convertToType(data['challengeId'], 'String');
       }
-      if (data.hasOwnProperty('status')) {
-        obj['status'] = ApiClient.convertToType(data['status'], 'String');
+      if (data.hasOwnProperty('userId')) {
+        obj['userId'] = ApiClient.convertToType(data['userId'], 'String');
       }
-      if (data.hasOwnProperty('track')) {
-        obj['track'] = ApiClient.convertToType(data['track'], 'String');
-      }
-      if (data.hasOwnProperty('subTrack')) {
-        obj['subTrack'] = ApiClient.convertToType(data['subTrack'], 'String');
-      }
-      if (data.hasOwnProperty('name')) {
-        obj['name'] = ApiClient.convertToType(data['name'], 'String');
-      }
-      if (data.hasOwnProperty('reviewType')) {
-        obj['reviewType'] = ApiClient.convertToType(data['reviewType'], 'String');
-      }
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-      }
-      if (data.hasOwnProperty('forumId')) {
-        obj['forumId'] = ApiClient.convertToType(data['forumId'], 'Number');
-      }
-      if (data.hasOwnProperty('numSubmissions')) {
-        obj['numSubmissions'] = ApiClient.convertToType(data['numSubmissions'], 'Number');
-      }
-      if (data.hasOwnProperty('numRegistrants')) {
-        obj['numRegistrants'] = ApiClient.convertToType(data['numRegistrants'], 'Number');
-      }
-      if (data.hasOwnProperty('registrationStartDate')) {
-        obj['registrationStartDate'] = ApiClient.convertToType(data['registrationStartDate'], 'Date');
-      }
-      if (data.hasOwnProperty('registrationEndDate')) {
-        obj['registrationEndDate'] = ApiClient.convertToType(data['registrationEndDate'], 'Date');
-      }
-      if (data.hasOwnProperty('checkpointSubmissionEndDate')) {
-        obj['checkpointSubmissionEndDate'] = ApiClient.convertToType(data['checkpointSubmissionEndDate'], 'Date');
-      }
-      if (data.hasOwnProperty('submissionEndDate')) {
-        obj['submissionEndDate'] = ApiClient.convertToType(data['submissionEndDate'], 'Date');
-      }
-      if (data.hasOwnProperty('platforms')) {
-        obj['platforms'] = ApiClient.convertToType(data['platforms'], 'String');
-      }
-      if (data.hasOwnProperty('numberOfCheckpointPrizes')) {
-        obj['numberOfCheckpointPrizes'] = ApiClient.convertToType(data['numberOfCheckpointPrizes'], 'Number');
-      }
-      if (data.hasOwnProperty('totalCheckpointPrize')) {
-        obj['totalCheckpointPrize'] = ApiClient.convertToType(data['totalCheckpointPrize'], 'Number');
-      }
-      if (data.hasOwnProperty('totalPrize')) {
-        obj['totalPrize'] = ApiClient.convertToType(data['totalPrize'], 'Number');
-      }
-      if (data.hasOwnProperty('isPrivate')) {
-        obj['isPrivate'] = ApiClient.convertToType(data['isPrivate'], 'Boolean');
-      }
-      if (data.hasOwnProperty('upcomingPhase')) {
-        obj['upcomingPhase'] = ApiClient.convertToType(data['upcomingPhase'], Object);
-      }
-      if (data.hasOwnProperty('projectId')) {
-        obj['projectId'] = ApiClient.convertToType(data['projectId'], 'Number');
-      }
-      if (data.hasOwnProperty('projectName')) {
-        obj['projectName'] = ApiClient.convertToType(data['projectName'], 'String');
-      }
-      if (data.hasOwnProperty('currentPhases')) {
-        obj['currentPhases'] = ApiClient.convertToType(data['currentPhases'], Object);
-      }
-      if (data.hasOwnProperty('submissionViewable')) {
-        obj['submissionViewable'] = ApiClient.convertToType(data['submissionViewable'], Object);
-      }
-      if (data.hasOwnProperty('isTask')) {
-        obj['isTask'] = ApiClient.convertToType(data['isTask'], 'Number');
+      if (data.hasOwnProperty('handle')) {
+        obj['handle'] = ApiClient.convertToType(data['handle'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {Array.<module:model/InlineResponse200ResultSubmissions>} submissions
+   * the old rating
+   * @member {String} oldRating
    */
-  exports.prototype['submissions'] = undefined;
+  exports.prototype['oldRating'] = undefined;
   /**
-   * the updated time
-   * @member {Date} updatedAt
+   * the new rating
+   * @member {String} newRating
    */
-  exports.prototype['updatedAt'] = undefined;
+  exports.prototype['newRating'] = undefined;
   /**
-   * the created time
-   * @member {Date} createdAt
+   * the final score
+   * @member {String} finalScore
    */
-  exports.prototype['createdAt'] = undefined;
+  exports.prototype['finalScore'] = undefined;
   /**
-   * the created user
-   * @member {String} createdBy
+   * the placement
+   * @member {String} placement
    */
-  exports.prototype['createdBy'] = undefined;
+  exports.prototype['placement'] = undefined;
   /**
-   * the updated user
-   * @member {String} updatedBy
+   * whether the submission passed review
+   * @member {Integer} passedReview
    */
-  exports.prototype['updatedBy'] = undefined;
+  exports.prototype['passedReview'] = undefined;
   /**
-   * @member {String} technologies
+   * the challenge id
+   * @member {String} challengeId
    */
-  exports.prototype['technologies'] = undefined;
+  exports.prototype['challengeId'] = undefined;
   /**
-   * @member {String} status
+   * the user id
+   * @member {String} userId
    */
-  exports.prototype['status'] = undefined;
+  exports.prototype['userId'] = undefined;
   /**
-   * @member {String} track
+   * the user handle
+   * @member {String} handle
    */
-  exports.prototype['track'] = undefined;
-  /**
-   * @member {String} subTrack
-   */
-  exports.prototype['subTrack'] = undefined;
-  /**
-   * @member {String} name
-   */
-  exports.prototype['name'] = undefined;
-  /**
-   * @member {String} reviewType
-   */
-  exports.prototype['reviewType'] = undefined;
-  /**
-   * the id
-   * @member {Number} id
-   */
-  exports.prototype['id'] = undefined;
-  /**
-   * @member {Number} forumId
-   */
-  exports.prototype['forumId'] = undefined;
-  /**
-   * @member {Number} numSubmissions
-   */
-  exports.prototype['numSubmissions'] = undefined;
-  /**
-   * @member {Number} numRegistrants
-   */
-  exports.prototype['numRegistrants'] = undefined;
-  /**
-   * @member {Date} registrationStartDate
-   */
-  exports.prototype['registrationStartDate'] = undefined;
-  /**
-   * @member {Date} registrationEndDate
-   */
-  exports.prototype['registrationEndDate'] = undefined;
-  /**
-   * ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ)
-   * @member {Date} checkpointSubmissionEndDate
-   */
-  exports.prototype['checkpointSubmissionEndDate'] = undefined;
-  /**
-   * ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ)
-   * @member {Date} submissionEndDate
-   */
-  exports.prototype['submissionEndDate'] = undefined;
-  /**
-   * @member {String} platforms
-   */
-  exports.prototype['platforms'] = undefined;
-  /**
-   * @member {Number} numberOfCheckpointPrizes
-   */
-  exports.prototype['numberOfCheckpointPrizes'] = undefined;
-  /**
-   * @member {Number} totalCheckpointPrize
-   */
-  exports.prototype['totalCheckpointPrize'] = undefined;
-  /**
-   * @member {Number} totalPrize
-   */
-  exports.prototype['totalPrize'] = undefined;
-  /**
-   * @member {Boolean} isPrivate
-   */
-  exports.prototype['isPrivate'] = undefined;
-  /**
-   * @member {Object} upcomingPhase
-   */
-  exports.prototype['upcomingPhase'] = undefined;
-  /**
-   * @member {Number} projectId
-   */
-  exports.prototype['projectId'] = undefined;
-  /**
-   * The related project name, only shown for admin
-   * @member {String} projectName
-   */
-  exports.prototype['projectName'] = undefined;
-  /**
-   * @member {Object} currentPhases
-   */
-  exports.prototype['currentPhases'] = undefined;
-  /**
-   * @member {Object} submissionViewable
-   */
-  exports.prototype['submissionViewable'] = undefined;
-  /**
-   * @member {Number} isTask
-   */
-  exports.prototype['isTask'] = undefined;
+  exports.prototype['handle'] = undefined;
 
 
 

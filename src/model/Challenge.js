@@ -9,6 +9,17 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 (function(root, factory) {
@@ -73,6 +84,8 @@
 
 
 
+
+
   };
 
   /**
@@ -87,7 +100,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
+        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
       if (data.hasOwnProperty('confidentialityType')) {
         obj['confidentialityType'] = ApiClient.convertToType(data['confidentialityType'], 'String');
@@ -105,10 +118,10 @@
         obj['reviewType'] = ApiClient.convertToType(data['reviewType'], 'String');
       }
       if (data.hasOwnProperty('billingAccountId')) {
-        obj['billingAccountId'] = ApiClient.convertToType(data['billingAccountId'], 'Number');
+        obj['billingAccountId'] = ApiClient.convertToType(data['billingAccountId'], 'Integer');
       }
       if (data.hasOwnProperty('milestoneId')) {
-        obj['milestoneId'] = ApiClient.convertToType(data['milestoneId'], 'Number');
+        obj['milestoneId'] = ApiClient.convertToType(data['milestoneId'], 'Integer');
       }
       if (data.hasOwnProperty('detailedRequirements')) {
         obj['detailedRequirements'] = ApiClient.convertToType(data['detailedRequirements'], 'String');
@@ -141,31 +154,37 @@
         obj['platforms'] = ApiClient.convertToType(data['platforms'], [ChallengeTechnologies]);
       }
       if (data.hasOwnProperty('numberOfCheckpointPrizes')) {
-        obj['numberOfCheckpointPrizes'] = ApiClient.convertToType(data['numberOfCheckpointPrizes'], 'Number');
+        obj['numberOfCheckpointPrizes'] = ApiClient.convertToType(data['numberOfCheckpointPrizes'], 'Integer');
       }
       if (data.hasOwnProperty('checkpointPrize')) {
-        obj['checkpointPrize'] = ApiClient.convertToType(data['checkpointPrize'], 'Number');
+        obj['checkpointPrize'] = ApiClient.convertToType(data['checkpointPrize'], 'Integer');
       }
       if (data.hasOwnProperty('finalDeliverableTypes')) {
         obj['finalDeliverableTypes'] = ApiClient.convertToType(data['finalDeliverableTypes'], [ChallengeTechnologies]);
       }
       if (data.hasOwnProperty('prizes')) {
-        obj['prizes'] = ApiClient.convertToType(data['prizes'], ['Number']);
+        obj['prizes'] = ApiClient.convertToType(data['prizes'], ['Integer']);
       }
       if (data.hasOwnProperty('projectId')) {
-        obj['projectId'] = ApiClient.convertToType(data['projectId'], 'Number');
+        obj['projectId'] = ApiClient.convertToType(data['projectId'], 'Integer');
       }
       if (data.hasOwnProperty('submissionVisibility')) {
         obj['submissionVisibility'] = ApiClient.convertToType(data['submissionVisibility'], 'Boolean');
       }
       if (data.hasOwnProperty('maxNumOfSubmissions')) {
-        obj['maxNumOfSubmissions'] = ApiClient.convertToType(data['maxNumOfSubmissions'], 'Number');
+        obj['maxNumOfSubmissions'] = ApiClient.convertToType(data['maxNumOfSubmissions'], 'Integer');
       }
       if (data.hasOwnProperty('task')) {
         obj['task'] = ApiClient.convertToType(data['task'], 'Boolean');
       }
       if (data.hasOwnProperty('assignees')) {
         obj['assignees'] = ApiClient.convertToType(data['assignees'], ['String']);
+      }
+      if (data.hasOwnProperty('copilotId')) {
+        obj['copilotId'] = ApiClient.convertToType(data['copilotId'], 'Integer');
+      }
+      if (data.hasOwnProperty('copilotFee')) {
+        obj['copilotFee'] = ApiClient.convertToType(data['copilotFee'], 'Integer');
       }
       if (data.hasOwnProperty('failedRegisterUsers')) {
         obj['failedRegisterUsers'] = ApiClient.convertToType(data['failedRegisterUsers'], [ChallengeFailedRegisterUsers]);
@@ -176,7 +195,7 @@
 
   /**
    * Challenge identifier.  This will be automatically created.
-   * @member {Number} id
+   * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
   /**
@@ -206,12 +225,12 @@
   exports.prototype['reviewType'] = undefined;
   /**
    * Billing account identifier. Optional.
-   * @member {Number} billingAccountId
+   * @member {Integer} billingAccountId
    */
   exports.prototype['billingAccountId'] = undefined;
   /**
    * Milestone identifier. Optional.
-   * @member {Number} milestoneId
+   * @member {Integer} milestoneId
    */
   exports.prototype['milestoneId'] = undefined;
   /**
@@ -266,12 +285,12 @@
   exports.prototype['platforms'] = undefined;
   /**
    * The number of checkpoint prizes that can be awarded.
-   * @member {Number} numberOfCheckpointPrizes
+   * @member {Integer} numberOfCheckpointPrizes
    */
   exports.prototype['numberOfCheckpointPrizes'] = undefined;
   /**
    * The checkpoint prize. This amount is the prize for EACH checkpoint winner.
-   * @member {Number} checkpointPrize
+   * @member {Integer} checkpointPrize
    */
   exports.prototype['checkpointPrize'] = undefined;
   /**
@@ -281,12 +300,12 @@
   exports.prototype['finalDeliverableTypes'] = undefined;
   /**
    * The prize list. Please follow standard pricing guidelines for the challenge type.
-   * @member {Array.<Number>} prizes
+   * @member {Array.<Integer>} prizes
    */
   exports.prototype['prizes'] = undefined;
   /**
    * Direct project identifier.  The challenge will be placed in this Direct project.
-   * @member {Number} projectId
+   * @member {Integer} projectId
    */
   exports.prototype['projectId'] = undefined;
   /**
@@ -296,7 +315,7 @@
   exports.prototype['submissionVisibility'] = undefined;
   /**
    * How many submissions can each submitter submit?
-   * @member {Number} maxNumOfSubmissions
+   * @member {Integer} maxNumOfSubmissions
    */
   exports.prototype['maxNumOfSubmissions'] = undefined;
   /**
@@ -309,6 +328,16 @@
    * @member {Array.<String>} assignees
    */
   exports.prototype['assignees'] = undefined;
+  /**
+   * The copilot id to set
+   * @member {Integer} copilotId
+   */
+  exports.prototype['copilotId'] = undefined;
+  /**
+   * The copilot fee for the copilot
+   * @member {Integer} copilotFee
+   */
+  exports.prototype['copilotFee'] = undefined;
   /**
    * Users that failed preregistering, including the reason. This is used in the response only.
    * @member {Array.<module:model/ChallengeFailedRegisterUsers>} failedRegisterUsers

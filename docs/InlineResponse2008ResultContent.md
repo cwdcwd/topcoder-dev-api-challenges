@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Number** |  | [optional] 
+**id** | **Integer** |  | [optional] 
 **name** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **endDate** | **Date** | ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ) | [optional] 
 **track** | **String** |  | [optional] 
 **subTrack** | **String** |  | [optional] 
-**numRegistrants** | **[Number]** |  | [optional] 
+**numRegistrants** | **[Integer]** |  | [optional] 
 **rounds** | [**[InlineResponse2008ResultRounds]**](InlineResponse2008ResultRounds.md) |  | [optional] 
 
 

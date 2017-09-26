@@ -9,6 +9,17 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 (function(root, factory) {
@@ -54,50 +65,260 @@
       //expect(instance).to.be.a(ApChallengeMicroservice.InlineResponse2002ResultContent);
     });
 
-    it('should have the property phaseType (base name: "phaseType")', function() {
-      // uncomment below and update the code to test the property phaseType
+    it('should have the property challengeType (base name: "challengeType")', function() {
+      // uncomment below and update the code to test the property challengeType
       //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
       //expect(instance).to.be();
     });
 
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
+    it('should have the property challengeName (base name: "challengeName")', function() {
+      // uncomment below and update the code to test the property challengeName
       //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
       //expect(instance).to.be();
     });
 
-    it('should have the property fixedStarTime (base name: "fixedStarTime")', function() {
-      // uncomment below and update the code to test the property fixedStarTime
+    it('should have the property challengeId (base name: "challengeId")', function() {
+      // uncomment below and update the code to test the property challengeId
       //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
       //expect(instance).to.be();
     });
 
-    it('should have the property scheduledStarTime (base name: "scheduledStarTime")', function() {
-      // uncomment below and update the code to test the property scheduledStarTime
+    it('should have the property projectId (base name: "projectId")', function() {
+      // uncomment below and update the code to test the property projectId
       //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
       //expect(instance).to.be();
     });
 
-    it('should have the property scheduledEndTime (base name: "scheduledEndTime")', function() {
-      // uncomment below and update the code to test the property scheduledEndTime
+    it('should have the property forumId (base name: "forumId")', function() {
+      // uncomment below and update the code to test the property forumId
       //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
       //expect(instance).to.be();
     });
 
-    it('should have the property actualStartTime (base name: "actualStartTime")', function() {
-      // uncomment below and update the code to test the property actualStartTime
+    it('should have the property introduction (base name: "introduction")', function() {
+      // uncomment below and update the code to test the property introduction
       //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
       //expect(instance).to.be();
     });
 
-    it('should have the property actualEndTime (base name: "actualEndTime")', function() {
-      // uncomment below and update the code to test the property actualEndTime
+    it('should have the property round1Introduction (base name: "round1Introduction")', function() {
+      // uncomment below and update the code to test the property round1Introduction
       //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
       //expect(instance).to.be();
     });
 
-    it('should have the property duration (base name: "duration")', function() {
-      // uncomment below and update the code to test the property duration
+    it('should have the property round2Introduction (base name: "round2Introduction")', function() {
+      // uncomment below and update the code to test the property round2Introduction
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property detailedRequirements (base name: "detailedRequirements")', function() {
+      // uncomment below and update the code to test the property detailedRequirements
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property finalSubmissionGuidelines (base name: "finalSubmissionGuidelines")', function() {
+      // uncomment below and update the code to test the property finalSubmissionGuidelines
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property screeningScorecardId (base name: "screeningScorecardId")', function() {
+      // uncomment below and update the code to test the property screeningScorecardId
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property reviewScorecardId (base name: "reviewScorecardId")', function() {
+      // uncomment below and update the code to test the property reviewScorecardId
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property cmcTaskId (base name: "cmcTaskId")', function() {
+      // uncomment below and update the code to test the property cmcTaskId
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property numberOfCheckpointsPrizes (base name: "numberOfCheckpointsPrizes")', function() {
+      // uncomment below and update the code to test the property numberOfCheckpointsPrizes
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property topCheckPointPrize (base name: "topCheckPointPrize")', function() {
+      // uncomment below and update the code to test the property topCheckPointPrize
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property postingDate (base name: "postingDate")', function() {
+      // uncomment below and update the code to test the property postingDate
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registrationEndDate (base name: "registrationEndDate")', function() {
+      // uncomment below and update the code to test the property registrationEndDate
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property checkpointSubmissionEndDate (base name: "checkpointSubmissionEndDate")', function() {
+      // uncomment below and update the code to test the property checkpointSubmissionEndDate
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property submissionEndDate (base name: "submissionEndDate")', function() {
+      // uncomment below and update the code to test the property submissionEndDate
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property submissionsViewable (base name: "submissionsViewable")', function() {
+      // uncomment below and update the code to test the property submissionsViewable
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property reviewType (base name: "reviewType")', function() {
+      // uncomment below and update the code to test the property reviewType
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property allowStockArt (base name: "allowStockArt")', function() {
+      // uncomment below and update the code to test the property allowStockArt
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property filetypes (base name: "filetypes")', function() {
+      // uncomment below and update the code to test the property filetypes
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property forumLink (base name: "forumLink")', function() {
+      // uncomment below and update the code to test the property forumLink
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property appealsEndDate (base name: "appealsEndDate")', function() {
+      // uncomment below and update the code to test the property appealsEndDate
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property finalFixEndDate (base name: "finalFixEndDate")', function() {
+      // uncomment below and update the code to test the property finalFixEndDate
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property submissionLimit (base name: "submissionLimit")', function() {
+      // uncomment below and update the code to test the property submissionLimit
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property currentStatus (base name: "currentStatus")', function() {
+      // uncomment below and update the code to test the property currentStatus
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property digitalRunPoints (base name: "digitalRunPoints")', function() {
+      // uncomment below and update the code to test the property digitalRunPoints
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property reliabilityBonus (base name: "reliabilityBonus")', function() {
+      // uncomment below and update the code to test the property reliabilityBonus
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property challengeCommunity (base name: "challengeCommunity")', function() {
+      // uncomment below and update the code to test the property challengeCommunity
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property directUrl (base name: "directUrl")', function() {
+      // uncomment below and update the code to test the property directUrl
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property technology (base name: "technology")', function() {
+      // uncomment below and update the code to test the property technology
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property prize (base name: "prize")', function() {
+      // uncomment below and update the code to test the property prize
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property winners (base name: "winners")', function() {
+      // uncomment below and update the code to test the property winners
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property currentPhaseName (base name: "currentPhaseName")', function() {
+      // uncomment below and update the code to test the property currentPhaseName
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property currentPhaseRemainingTime (base name: "currentPhaseRemainingTime")', function() {
+      // uncomment below and update the code to test the property currentPhaseRemainingTime
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property currentPhaseEndDate (base name: "currentPhaseEndDate")', function() {
+      // uncomment below and update the code to test the property currentPhaseEndDate
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property document (base name: "Document")', function() {
+      // uncomment below and update the code to test the property document
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property platforms (base name: "platforms")', function() {
+      // uncomment below and update the code to test the property platforms
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property event (base name: "event")', function() {
+      // uncomment below and update the code to test the property event
+      //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property copilotDetailedRequirements (base name: "copilotDetailedRequirements")', function() {
+      // uncomment below and update the code to test the property copilotDetailedRequirements
       //var instane = new ApChallengeMicroservice.InlineResponse2002ResultContent();
       //expect(instance).to.be();
     });

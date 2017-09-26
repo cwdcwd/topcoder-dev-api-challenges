@@ -9,17 +9,28 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddResourceBody', 'model/Challenge', 'model/ChallengeFailedRegisterUsers', 'model/ChallengeProperties', 'model/ChallengeResponse', 'model/ChallengeResponseResult', 'model/ChallengeTechnologies', 'model/ErrorModel', 'model/ErrorModelResult', 'model/GetResourceResponse', 'model/GetResourceResult', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/InlineResponse2001Result', 'model/InlineResponse2001ResultContent', 'model/InlineResponse2002', 'model/InlineResponse2002Result', 'model/InlineResponse2002ResultContent', 'model/InlineResponse2003', 'model/InlineResponse2003Result', 'model/InlineResponse2003ResultContent', 'model/InlineResponse2004', 'model/InlineResponse2004Result', 'model/InlineResponse2004ResultContent', 'model/InlineResponse2005', 'model/InlineResponse2005Result', 'model/InlineResponse2005ResultContent', 'model/InlineResponse2006', 'model/InlineResponse2006Result', 'model/InlineResponse2006ResultContent', 'model/InlineResponse2007', 'model/InlineResponse2007Result', 'model/InlineResponse2007ResultContent', 'model/InlineResponse2007ResultUserDetails', 'model/InlineResponse2008', 'model/InlineResponse2008Result', 'model/InlineResponse2008ResultContent', 'model/InlineResponse2008ResultRounds', 'model/InlineResponse2009', 'model/InlineResponse2009Result', 'model/InlineResponse2009ResultContent', 'model/InlineResponse2009ResultRounds', 'model/InlineResponse2009ResultUserMMDetails', 'model/InlineResponse200Result', 'model/InlineResponse200ResultContent', 'model/InlineResponse200ResultSubmissions', 'model/ManageResourceResponse', 'model/ManageResourceResult', 'model/NewChallengeBodyParam', 'model/NewPlatformBodyParam', 'model/NewTechnologyBodyParam', 'model/NormalResponse', 'model/NormalResponseResult', 'model/NullResponse', 'model/NullResponseResult', 'model/Platform', 'model/PlatformArrayResponse', 'model/PlatformArrayResponseResult', 'model/PlatformResponse', 'model/PlatformResponseResult', 'model/RemoveResourceBody', 'model/ResponseMetadata', 'model/Status', 'model/Technology', 'model/TechnologyArrayResponse', 'model/TechnologyArrayResponseResult', 'model/TechnologyResponse', 'model/TechnologyResponseResult', 'model/ValidationErrorModel', 'api/DefaultApi'], factory);
+    define(['ApiClient', 'model/AddResourceBody', 'model/Challenge', 'model/ChallengeFailedRegisterUsers', 'model/ChallengeProperties', 'model/ChallengeResponse', 'model/ChallengeResponseResult', 'model/ChallengeTechnologies', 'model/ChallengeTypeResponse', 'model/ChallengeTypeResponseResult', 'model/ChallengeTypeResponseResultContent', 'model/ChallengeUpdate', 'model/DirectChallenge', 'model/DirectPrize', 'model/ErrorModel', 'model/ErrorModelResult', 'model/GetResourceResponse', 'model/GetResourceResult', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/InlineResponse20010', 'model/InlineResponse20010Result', 'model/InlineResponse20010ResultContent', 'model/InlineResponse20011', 'model/InlineResponse20011Result', 'model/InlineResponse20011ResultContent', 'model/InlineResponse2001Result', 'model/InlineResponse2001ResultContent', 'model/InlineResponse2001ResultEvents', 'model/InlineResponse2001ResultSubmissions', 'model/InlineResponse2001ResultWinners', 'model/InlineResponse2002', 'model/InlineResponse2002Result', 'model/InlineResponse2002ResultContent', 'model/InlineResponse2002ResultContentDocument', 'model/InlineResponse2002ResultContentEvent', 'model/InlineResponse2002ResultContentWinners', 'model/InlineResponse2003', 'model/InlineResponse2003Result', 'model/InlineResponse2003ResultMetadata', 'model/InlineResponse2004', 'model/InlineResponse2004Result', 'model/InlineResponse2004ResultContent', 'model/InlineResponse2005', 'model/InlineResponse2005Result', 'model/InlineResponse2005ResultContent', 'model/InlineResponse2006', 'model/InlineResponse2006Result', 'model/InlineResponse2006ResultContent', 'model/InlineResponse2006ResultUserDetails', 'model/InlineResponse2007', 'model/InlineResponse2007Result', 'model/InlineResponse2007ResultContent', 'model/InlineResponse2007ResultRounds', 'model/InlineResponse2007ResultUserMMDetails', 'model/InlineResponse2008', 'model/InlineResponse2008Result', 'model/InlineResponse2008ResultContent', 'model/InlineResponse2008ResultRounds', 'model/InlineResponse2009', 'model/InlineResponse2009Result', 'model/InlineResponse2009ResultContent', 'model/InlineResponse200Result', 'model/InlineResponse200ResultContent', 'model/ManageResourceResponse', 'model/ManageResourceResult', 'model/NewChallengeBodyParam', 'model/NewPlatformBodyParam', 'model/NewTechnologyBodyParam', 'model/NormalResponse', 'model/NormalResponseResult', 'model/NullResponse', 'model/NullResponseResult', 'model/Platform', 'model/PlatformArrayResponse', 'model/PlatformArrayResponseResult', 'model/PlatformResponse', 'model/PlatformResponseResult', 'model/RemoveResourceBody', 'model/ResponseMetadata', 'model/Status', 'model/Technology', 'model/TechnologyArrayResponse', 'model/TechnologyArrayResponseResult', 'model/TechnologyResponse', 'model/TechnologyResponseResult', 'model/UpdateChallengeBodyParam', 'model/ValidationErrorModel', 'api/DefaultApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/AddResourceBody'), require('./model/Challenge'), require('./model/ChallengeFailedRegisterUsers'), require('./model/ChallengeProperties'), require('./model/ChallengeResponse'), require('./model/ChallengeResponseResult'), require('./model/ChallengeTechnologies'), require('./model/ErrorModel'), require('./model/ErrorModelResult'), require('./model/GetResourceResponse'), require('./model/GetResourceResult'), require('./model/InlineResponse200'), require('./model/InlineResponse2001'), require('./model/InlineResponse2001Result'), require('./model/InlineResponse2001ResultContent'), require('./model/InlineResponse2002'), require('./model/InlineResponse2002Result'), require('./model/InlineResponse2002ResultContent'), require('./model/InlineResponse2003'), require('./model/InlineResponse2003Result'), require('./model/InlineResponse2003ResultContent'), require('./model/InlineResponse2004'), require('./model/InlineResponse2004Result'), require('./model/InlineResponse2004ResultContent'), require('./model/InlineResponse2005'), require('./model/InlineResponse2005Result'), require('./model/InlineResponse2005ResultContent'), require('./model/InlineResponse2006'), require('./model/InlineResponse2006Result'), require('./model/InlineResponse2006ResultContent'), require('./model/InlineResponse2007'), require('./model/InlineResponse2007Result'), require('./model/InlineResponse2007ResultContent'), require('./model/InlineResponse2007ResultUserDetails'), require('./model/InlineResponse2008'), require('./model/InlineResponse2008Result'), require('./model/InlineResponse2008ResultContent'), require('./model/InlineResponse2008ResultRounds'), require('./model/InlineResponse2009'), require('./model/InlineResponse2009Result'), require('./model/InlineResponse2009ResultContent'), require('./model/InlineResponse2009ResultRounds'), require('./model/InlineResponse2009ResultUserMMDetails'), require('./model/InlineResponse200Result'), require('./model/InlineResponse200ResultContent'), require('./model/InlineResponse200ResultSubmissions'), require('./model/ManageResourceResponse'), require('./model/ManageResourceResult'), require('./model/NewChallengeBodyParam'), require('./model/NewPlatformBodyParam'), require('./model/NewTechnologyBodyParam'), require('./model/NormalResponse'), require('./model/NormalResponseResult'), require('./model/NullResponse'), require('./model/NullResponseResult'), require('./model/Platform'), require('./model/PlatformArrayResponse'), require('./model/PlatformArrayResponseResult'), require('./model/PlatformResponse'), require('./model/PlatformResponseResult'), require('./model/RemoveResourceBody'), require('./model/ResponseMetadata'), require('./model/Status'), require('./model/Technology'), require('./model/TechnologyArrayResponse'), require('./model/TechnologyArrayResponseResult'), require('./model/TechnologyResponse'), require('./model/TechnologyResponseResult'), require('./model/ValidationErrorModel'), require('./api/DefaultApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AddResourceBody'), require('./model/Challenge'), require('./model/ChallengeFailedRegisterUsers'), require('./model/ChallengeProperties'), require('./model/ChallengeResponse'), require('./model/ChallengeResponseResult'), require('./model/ChallengeTechnologies'), require('./model/ChallengeTypeResponse'), require('./model/ChallengeTypeResponseResult'), require('./model/ChallengeTypeResponseResultContent'), require('./model/ChallengeUpdate'), require('./model/DirectChallenge'), require('./model/DirectPrize'), require('./model/ErrorModel'), require('./model/ErrorModelResult'), require('./model/GetResourceResponse'), require('./model/GetResourceResult'), require('./model/InlineResponse200'), require('./model/InlineResponse2001'), require('./model/InlineResponse20010'), require('./model/InlineResponse20010Result'), require('./model/InlineResponse20010ResultContent'), require('./model/InlineResponse20011'), require('./model/InlineResponse20011Result'), require('./model/InlineResponse20011ResultContent'), require('./model/InlineResponse2001Result'), require('./model/InlineResponse2001ResultContent'), require('./model/InlineResponse2001ResultEvents'), require('./model/InlineResponse2001ResultSubmissions'), require('./model/InlineResponse2001ResultWinners'), require('./model/InlineResponse2002'), require('./model/InlineResponse2002Result'), require('./model/InlineResponse2002ResultContent'), require('./model/InlineResponse2002ResultContentDocument'), require('./model/InlineResponse2002ResultContentEvent'), require('./model/InlineResponse2002ResultContentWinners'), require('./model/InlineResponse2003'), require('./model/InlineResponse2003Result'), require('./model/InlineResponse2003ResultMetadata'), require('./model/InlineResponse2004'), require('./model/InlineResponse2004Result'), require('./model/InlineResponse2004ResultContent'), require('./model/InlineResponse2005'), require('./model/InlineResponse2005Result'), require('./model/InlineResponse2005ResultContent'), require('./model/InlineResponse2006'), require('./model/InlineResponse2006Result'), require('./model/InlineResponse2006ResultContent'), require('./model/InlineResponse2006ResultUserDetails'), require('./model/InlineResponse2007'), require('./model/InlineResponse2007Result'), require('./model/InlineResponse2007ResultContent'), require('./model/InlineResponse2007ResultRounds'), require('./model/InlineResponse2007ResultUserMMDetails'), require('./model/InlineResponse2008'), require('./model/InlineResponse2008Result'), require('./model/InlineResponse2008ResultContent'), require('./model/InlineResponse2008ResultRounds'), require('./model/InlineResponse2009'), require('./model/InlineResponse2009Result'), require('./model/InlineResponse2009ResultContent'), require('./model/InlineResponse200Result'), require('./model/InlineResponse200ResultContent'), require('./model/ManageResourceResponse'), require('./model/ManageResourceResult'), require('./model/NewChallengeBodyParam'), require('./model/NewPlatformBodyParam'), require('./model/NewTechnologyBodyParam'), require('./model/NormalResponse'), require('./model/NormalResponseResult'), require('./model/NullResponse'), require('./model/NullResponseResult'), require('./model/Platform'), require('./model/PlatformArrayResponse'), require('./model/PlatformArrayResponseResult'), require('./model/PlatformResponse'), require('./model/PlatformResponseResult'), require('./model/RemoveResourceBody'), require('./model/ResponseMetadata'), require('./model/Status'), require('./model/Technology'), require('./model/TechnologyArrayResponse'), require('./model/TechnologyArrayResponseResult'), require('./model/TechnologyResponse'), require('./model/TechnologyResponseResult'), require('./model/UpdateChallengeBodyParam'), require('./model/ValidationErrorModel'), require('./api/DefaultApi'));
   }
-}(function(ApiClient, AddResourceBody, Challenge, ChallengeFailedRegisterUsers, ChallengeProperties, ChallengeResponse, ChallengeResponseResult, ChallengeTechnologies, ErrorModel, ErrorModelResult, GetResourceResponse, GetResourceResult, InlineResponse200, InlineResponse2001, InlineResponse2001Result, InlineResponse2001ResultContent, InlineResponse2002, InlineResponse2002Result, InlineResponse2002ResultContent, InlineResponse2003, InlineResponse2003Result, InlineResponse2003ResultContent, InlineResponse2004, InlineResponse2004Result, InlineResponse2004ResultContent, InlineResponse2005, InlineResponse2005Result, InlineResponse2005ResultContent, InlineResponse2006, InlineResponse2006Result, InlineResponse2006ResultContent, InlineResponse2007, InlineResponse2007Result, InlineResponse2007ResultContent, InlineResponse2007ResultUserDetails, InlineResponse2008, InlineResponse2008Result, InlineResponse2008ResultContent, InlineResponse2008ResultRounds, InlineResponse2009, InlineResponse2009Result, InlineResponse2009ResultContent, InlineResponse2009ResultRounds, InlineResponse2009ResultUserMMDetails, InlineResponse200Result, InlineResponse200ResultContent, InlineResponse200ResultSubmissions, ManageResourceResponse, ManageResourceResult, NewChallengeBodyParam, NewPlatformBodyParam, NewTechnologyBodyParam, NormalResponse, NormalResponseResult, NullResponse, NullResponseResult, Platform, PlatformArrayResponse, PlatformArrayResponseResult, PlatformResponse, PlatformResponseResult, RemoveResourceBody, ResponseMetadata, Status, Technology, TechnologyArrayResponse, TechnologyArrayResponseResult, TechnologyResponse, TechnologyResponseResult, ValidationErrorModel, DefaultApi) {
+}(function(ApiClient, AddResourceBody, Challenge, ChallengeFailedRegisterUsers, ChallengeProperties, ChallengeResponse, ChallengeResponseResult, ChallengeTechnologies, ChallengeTypeResponse, ChallengeTypeResponseResult, ChallengeTypeResponseResultContent, ChallengeUpdate, DirectChallenge, DirectPrize, ErrorModel, ErrorModelResult, GetResourceResponse, GetResourceResult, InlineResponse200, InlineResponse2001, InlineResponse20010, InlineResponse20010Result, InlineResponse20010ResultContent, InlineResponse20011, InlineResponse20011Result, InlineResponse20011ResultContent, InlineResponse2001Result, InlineResponse2001ResultContent, InlineResponse2001ResultEvents, InlineResponse2001ResultSubmissions, InlineResponse2001ResultWinners, InlineResponse2002, InlineResponse2002Result, InlineResponse2002ResultContent, InlineResponse2002ResultContentDocument, InlineResponse2002ResultContentEvent, InlineResponse2002ResultContentWinners, InlineResponse2003, InlineResponse2003Result, InlineResponse2003ResultMetadata, InlineResponse2004, InlineResponse2004Result, InlineResponse2004ResultContent, InlineResponse2005, InlineResponse2005Result, InlineResponse2005ResultContent, InlineResponse2006, InlineResponse2006Result, InlineResponse2006ResultContent, InlineResponse2006ResultUserDetails, InlineResponse2007, InlineResponse2007Result, InlineResponse2007ResultContent, InlineResponse2007ResultRounds, InlineResponse2007ResultUserMMDetails, InlineResponse2008, InlineResponse2008Result, InlineResponse2008ResultContent, InlineResponse2008ResultRounds, InlineResponse2009, InlineResponse2009Result, InlineResponse2009ResultContent, InlineResponse200Result, InlineResponse200ResultContent, ManageResourceResponse, ManageResourceResult, NewChallengeBodyParam, NewPlatformBodyParam, NewTechnologyBodyParam, NormalResponse, NormalResponseResult, NullResponse, NullResponseResult, Platform, PlatformArrayResponse, PlatformArrayResponseResult, PlatformResponse, PlatformResponseResult, RemoveResourceBody, ResponseMetadata, Status, Technology, TechnologyArrayResponse, TechnologyArrayResponseResult, TechnologyResponse, TechnologyResponseResult, UpdateChallengeBodyParam, ValidationErrorModel, DefaultApi) {
   'use strict';
 
   /**
@@ -95,6 +106,36 @@
      */
     ChallengeTechnologies: ChallengeTechnologies,
     /**
+     * The ChallengeTypeResponse model constructor.
+     * @property {module:model/ChallengeTypeResponse}
+     */
+    ChallengeTypeResponse: ChallengeTypeResponse,
+    /**
+     * The ChallengeTypeResponseResult model constructor.
+     * @property {module:model/ChallengeTypeResponseResult}
+     */
+    ChallengeTypeResponseResult: ChallengeTypeResponseResult,
+    /**
+     * The ChallengeTypeResponseResultContent model constructor.
+     * @property {module:model/ChallengeTypeResponseResultContent}
+     */
+    ChallengeTypeResponseResultContent: ChallengeTypeResponseResultContent,
+    /**
+     * The ChallengeUpdate model constructor.
+     * @property {module:model/ChallengeUpdate}
+     */
+    ChallengeUpdate: ChallengeUpdate,
+    /**
+     * The DirectChallenge model constructor.
+     * @property {module:model/DirectChallenge}
+     */
+    DirectChallenge: DirectChallenge,
+    /**
+     * The DirectPrize model constructor.
+     * @property {module:model/DirectPrize}
+     */
+    DirectPrize: DirectPrize,
+    /**
      * The ErrorModel model constructor.
      * @property {module:model/ErrorModel}
      */
@@ -125,6 +166,36 @@
      */
     InlineResponse2001: InlineResponse2001,
     /**
+     * The InlineResponse20010 model constructor.
+     * @property {module:model/InlineResponse20010}
+     */
+    InlineResponse20010: InlineResponse20010,
+    /**
+     * The InlineResponse20010Result model constructor.
+     * @property {module:model/InlineResponse20010Result}
+     */
+    InlineResponse20010Result: InlineResponse20010Result,
+    /**
+     * The InlineResponse20010ResultContent model constructor.
+     * @property {module:model/InlineResponse20010ResultContent}
+     */
+    InlineResponse20010ResultContent: InlineResponse20010ResultContent,
+    /**
+     * The InlineResponse20011 model constructor.
+     * @property {module:model/InlineResponse20011}
+     */
+    InlineResponse20011: InlineResponse20011,
+    /**
+     * The InlineResponse20011Result model constructor.
+     * @property {module:model/InlineResponse20011Result}
+     */
+    InlineResponse20011Result: InlineResponse20011Result,
+    /**
+     * The InlineResponse20011ResultContent model constructor.
+     * @property {module:model/InlineResponse20011ResultContent}
+     */
+    InlineResponse20011ResultContent: InlineResponse20011ResultContent,
+    /**
      * The InlineResponse2001Result model constructor.
      * @property {module:model/InlineResponse2001Result}
      */
@@ -134,6 +205,21 @@
      * @property {module:model/InlineResponse2001ResultContent}
      */
     InlineResponse2001ResultContent: InlineResponse2001ResultContent,
+    /**
+     * The InlineResponse2001ResultEvents model constructor.
+     * @property {module:model/InlineResponse2001ResultEvents}
+     */
+    InlineResponse2001ResultEvents: InlineResponse2001ResultEvents,
+    /**
+     * The InlineResponse2001ResultSubmissions model constructor.
+     * @property {module:model/InlineResponse2001ResultSubmissions}
+     */
+    InlineResponse2001ResultSubmissions: InlineResponse2001ResultSubmissions,
+    /**
+     * The InlineResponse2001ResultWinners model constructor.
+     * @property {module:model/InlineResponse2001ResultWinners}
+     */
+    InlineResponse2001ResultWinners: InlineResponse2001ResultWinners,
     /**
      * The InlineResponse2002 model constructor.
      * @property {module:model/InlineResponse2002}
@@ -150,6 +236,21 @@
      */
     InlineResponse2002ResultContent: InlineResponse2002ResultContent,
     /**
+     * The InlineResponse2002ResultContentDocument model constructor.
+     * @property {module:model/InlineResponse2002ResultContentDocument}
+     */
+    InlineResponse2002ResultContentDocument: InlineResponse2002ResultContentDocument,
+    /**
+     * The InlineResponse2002ResultContentEvent model constructor.
+     * @property {module:model/InlineResponse2002ResultContentEvent}
+     */
+    InlineResponse2002ResultContentEvent: InlineResponse2002ResultContentEvent,
+    /**
+     * The InlineResponse2002ResultContentWinners model constructor.
+     * @property {module:model/InlineResponse2002ResultContentWinners}
+     */
+    InlineResponse2002ResultContentWinners: InlineResponse2002ResultContentWinners,
+    /**
      * The InlineResponse2003 model constructor.
      * @property {module:model/InlineResponse2003}
      */
@@ -160,10 +261,10 @@
      */
     InlineResponse2003Result: InlineResponse2003Result,
     /**
-     * The InlineResponse2003ResultContent model constructor.
-     * @property {module:model/InlineResponse2003ResultContent}
+     * The InlineResponse2003ResultMetadata model constructor.
+     * @property {module:model/InlineResponse2003ResultMetadata}
      */
-    InlineResponse2003ResultContent: InlineResponse2003ResultContent,
+    InlineResponse2003ResultMetadata: InlineResponse2003ResultMetadata,
     /**
      * The InlineResponse2004 model constructor.
      * @property {module:model/InlineResponse2004}
@@ -210,6 +311,11 @@
      */
     InlineResponse2006ResultContent: InlineResponse2006ResultContent,
     /**
+     * The InlineResponse2006ResultUserDetails model constructor.
+     * @property {module:model/InlineResponse2006ResultUserDetails}
+     */
+    InlineResponse2006ResultUserDetails: InlineResponse2006ResultUserDetails,
+    /**
      * The InlineResponse2007 model constructor.
      * @property {module:model/InlineResponse2007}
      */
@@ -225,10 +331,15 @@
      */
     InlineResponse2007ResultContent: InlineResponse2007ResultContent,
     /**
-     * The InlineResponse2007ResultUserDetails model constructor.
-     * @property {module:model/InlineResponse2007ResultUserDetails}
+     * The InlineResponse2007ResultRounds model constructor.
+     * @property {module:model/InlineResponse2007ResultRounds}
      */
-    InlineResponse2007ResultUserDetails: InlineResponse2007ResultUserDetails,
+    InlineResponse2007ResultRounds: InlineResponse2007ResultRounds,
+    /**
+     * The InlineResponse2007ResultUserMMDetails model constructor.
+     * @property {module:model/InlineResponse2007ResultUserMMDetails}
+     */
+    InlineResponse2007ResultUserMMDetails: InlineResponse2007ResultUserMMDetails,
     /**
      * The InlineResponse2008 model constructor.
      * @property {module:model/InlineResponse2008}
@@ -265,16 +376,6 @@
      */
     InlineResponse2009ResultContent: InlineResponse2009ResultContent,
     /**
-     * The InlineResponse2009ResultRounds model constructor.
-     * @property {module:model/InlineResponse2009ResultRounds}
-     */
-    InlineResponse2009ResultRounds: InlineResponse2009ResultRounds,
-    /**
-     * The InlineResponse2009ResultUserMMDetails model constructor.
-     * @property {module:model/InlineResponse2009ResultUserMMDetails}
-     */
-    InlineResponse2009ResultUserMMDetails: InlineResponse2009ResultUserMMDetails,
-    /**
      * The InlineResponse200Result model constructor.
      * @property {module:model/InlineResponse200Result}
      */
@@ -284,11 +385,6 @@
      * @property {module:model/InlineResponse200ResultContent}
      */
     InlineResponse200ResultContent: InlineResponse200ResultContent,
-    /**
-     * The InlineResponse200ResultSubmissions model constructor.
-     * @property {module:model/InlineResponse200ResultSubmissions}
-     */
-    InlineResponse200ResultSubmissions: InlineResponse200ResultSubmissions,
     /**
      * The ManageResourceResponse model constructor.
      * @property {module:model/ManageResourceResponse}
@@ -399,6 +495,11 @@
      * @property {module:model/TechnologyResponseResult}
      */
     TechnologyResponseResult: TechnologyResponseResult,
+    /**
+     * The UpdateChallengeBodyParam model constructor.
+     * @property {module:model/UpdateChallengeBodyParam}
+     */
+    UpdateChallengeBodyParam: UpdateChallengeBodyParam,
     /**
      * The ValidationErrorModel model constructor.
      * @property {module:model/ValidationErrorModel}

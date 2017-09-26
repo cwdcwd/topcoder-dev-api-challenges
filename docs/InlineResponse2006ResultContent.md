@@ -3,37 +3,42 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**userId** | **String** | the user id | [optional] 
-**oldRating** | **String** | the old rating | [optional] 
-**newRating** | **String** | the new rating | [optional] 
-**rated** | **String** | whether this SRM is rated | [optional] 
-**roomPlacement** | **String** | the room placement | [optional] 
-**division** | **String** | the division | [optional] 
-**finalPoints** | **String** | the final points | [optional] 
-**divisionPlacement** | **String** | the division placement | [optional] 
-**overallRank** | **String** | the overall rank | [optional] 
-**contestId** | **String** | the contest id | [optional] 
-
-
-<a name="RatedEnum"></a>
-## Enum: RatedEnum
-
-
-* `0` (value: `"0"`)
-
-* `1` (value: `"1"`)
-
-
-
-
-<a name="DivisionEnum"></a>
-## Enum: DivisionEnum
-
-
-* `1` (value: `"1"`)
-
-* `2` (value: `"2"`)
-
-
+**updatedAt** | **Date** |  | [optional] 
+**createdAt** | **Date** |  | [optional] 
+**createdBy** | **String** |  | [optional] 
+**updatedBy** | **String** |  | [optional] 
+**technologies** | **String** |  | [optional] 
+**status** | **String** |  | [optional] 
+**track** | **String** |  | [optional] 
+**subTrack** | **String** |  | [optional] 
+**name** | **String** |  | [optional] 
+**reviewType** | **String** |  | [optional] 
+**id** | **Integer** |  | [optional] 
+**forumId** | **Integer** |  | [optional] 
+**numSubmissions** | **Integer** |  | [optional] 
+**numRegistrants** | **Integer** |  | [optional] 
+**registrationStartDate** | **Date** |  | [optional] 
+**registrationEndDate** | **Date** |  | [optional] 
+**checkpointSubmissionEndDate** | **Date** | ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ) | [optional] 
+**submissionEndDate** | **Date** | ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ) | [optional] 
+**platforms** | **String** |  | [optional] 
+**numberOfCheckpointPrizes** | **Integer** |  | [optional] 
+**totalCheckpointPrize** | **Integer** |  | [optional] 
+**totalPrize** | **Integer** |  | [optional] 
+**isPrivate** | **Boolean** |  | [optional] 
+**upcomingPhase** | **Object** |  | [optional] 
+**projectId** | **Integer** |  | [optional] 
+**projectName** | **String** | The related project name, only shown for admin | [optional] 
+**currentPhases** | **Object** |  | [optional] 
+**allPhases** | **[Object]** |  | [optional] 
+**prize** | **[Integer]** |  | [optional] 
+**events** | [**[InlineResponse2001ResultEvents]**](InlineResponse2001ResultEvents.md) |  | [optional] 
+**drPoints** | **Integer** |  | [optional] 
+**reliabilityBonus** | **Number** |  | [optional] 
+**userId** | **Integer** |  | [optional] 
+**handle** | **String** |  | [optional] 
+**isTask** | **Integer** |  | [optional] 
+**groupIds** | **[Integer]** |  | [optional] 
+**userDetails** | [**InlineResponse2006ResultUserDetails**](InlineResponse2006ResultUserDetails.md) |  | [optional] 
 
 

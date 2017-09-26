@@ -9,6 +9,17 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 (function(root, factory) {
@@ -41,8 +52,8 @@
    * Constructs a new <code>AddResourceBody</code>.
    * @alias module:model/AddResourceBody
    * @class
-   * @param roleId {Number} 
-   * @param resourceUserId {Number} 
+   * @param roleId {Integer} 
+   * @param resourceUserId {Integer} 
    */
   var exports = function(roleId, resourceUserId) {
     var _this = this;
@@ -68,13 +79,13 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('roleId')) {
-        obj['roleId'] = ApiClient.convertToType(data['roleId'], 'Number');
+        obj['roleId'] = ApiClient.convertToType(data['roleId'], 'Integer');
       }
       if (data.hasOwnProperty('resourceUserId')) {
-        obj['resourceUserId'] = ApiClient.convertToType(data['resourceUserId'], 'Number');
+        obj['resourceUserId'] = ApiClient.convertToType(data['resourceUserId'], 'Integer');
       }
       if (data.hasOwnProperty('phaseId')) {
-        obj['phaseId'] = ApiClient.convertToType(data['phaseId'], 'Number');
+        obj['phaseId'] = ApiClient.convertToType(data['phaseId'], 'Integer');
       }
       if (data.hasOwnProperty('addNotification')) {
         obj['addNotification'] = ApiClient.convertToType(data['addNotification'], 'Boolean');
@@ -93,15 +104,15 @@
   }
 
   /**
-   * @member {Number} roleId
+   * @member {Integer} roleId
    */
   exports.prototype['roleId'] = undefined;
   /**
-   * @member {Number} resourceUserId
+   * @member {Integer} resourceUserId
    */
   exports.prototype['resourceUserId'] = undefined;
   /**
-   * @member {Number} phaseId
+   * @member {Integer} phaseId
    */
   exports.prototype['phaseId'] = undefined;
   /**
