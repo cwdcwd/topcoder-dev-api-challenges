@@ -9,23 +9,34 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/InlineResponse2002ResultContentDocument', 'model/InlineResponse2002ResultContentEvent', 'model/InlineResponse2002ResultContentWinners'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./InlineResponse2002ResultContentDocument'), require('./InlineResponse2002ResultContentEvent'), require('./InlineResponse2002ResultContentWinners'));
   } else {
     // Browser globals (root is window)
     if (!root.ApChallengeMicroservice) {
       root.ApChallengeMicroservice = {};
     }
-    root.ApChallengeMicroservice.InlineResponse2002ResultContent = factory(root.ApChallengeMicroservice.ApiClient);
+    root.ApChallengeMicroservice.InlineResponse2002ResultContent = factory(root.ApChallengeMicroservice.ApiClient, root.ApChallengeMicroservice.InlineResponse2002ResultContentDocument, root.ApChallengeMicroservice.InlineResponse2002ResultContentEvent, root.ApChallengeMicroservice.InlineResponse2002ResultContentWinners);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, InlineResponse2002ResultContentDocument, InlineResponse2002ResultContentEvent, InlineResponse2002ResultContentWinners) {
   'use strict';
 
 
@@ -53,6 +64,41 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   };
 
   /**
@@ -66,194 +112,312 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('phaseType')) {
-        obj['phaseType'] = ApiClient.convertToType(data['phaseType'], 'String');
+      if (data.hasOwnProperty('challengeType')) {
+        obj['challengeType'] = ApiClient.convertToType(data['challengeType'], 'String');
       }
-      if (data.hasOwnProperty('status')) {
-        obj['status'] = ApiClient.convertToType(data['status'], 'String');
+      if (data.hasOwnProperty('challengeName')) {
+        obj['challengeName'] = ApiClient.convertToType(data['challengeName'], 'String');
       }
-      if (data.hasOwnProperty('fixedStarTime')) {
-        obj['fixedStarTime'] = ApiClient.convertToType(data['fixedStarTime'], 'Date');
+      if (data.hasOwnProperty('challengeId')) {
+        obj['challengeId'] = ApiClient.convertToType(data['challengeId'], 'Number');
       }
-      if (data.hasOwnProperty('scheduledStarTime')) {
-        obj['scheduledStarTime'] = ApiClient.convertToType(data['scheduledStarTime'], 'Date');
+      if (data.hasOwnProperty('projectId')) {
+        obj['projectId'] = ApiClient.convertToType(data['projectId'], 'Number');
       }
-      if (data.hasOwnProperty('scheduledEndTime')) {
-        obj['scheduledEndTime'] = ApiClient.convertToType(data['scheduledEndTime'], 'Date');
+      if (data.hasOwnProperty('forumId')) {
+        obj['forumId'] = ApiClient.convertToType(data['forumId'], 'Number');
       }
-      if (data.hasOwnProperty('actualStartTime')) {
-        obj['actualStartTime'] = ApiClient.convertToType(data['actualStartTime'], 'Date');
+      if (data.hasOwnProperty('introduction')) {
+        obj['introduction'] = ApiClient.convertToType(data['introduction'], 'String');
       }
-      if (data.hasOwnProperty('actualEndTime')) {
-        obj['actualEndTime'] = ApiClient.convertToType(data['actualEndTime'], 'Date');
+      if (data.hasOwnProperty('round1Introduction')) {
+        obj['round1Introduction'] = ApiClient.convertToType(data['round1Introduction'], 'String');
       }
-      if (data.hasOwnProperty('duration')) {
-        obj['duration'] = ApiClient.convertToType(data['duration'], 'String');
+      if (data.hasOwnProperty('round2Introduction')) {
+        obj['round2Introduction'] = ApiClient.convertToType(data['round2Introduction'], 'String');
+      }
+      if (data.hasOwnProperty('detailedRequirements')) {
+        obj['detailedRequirements'] = ApiClient.convertToType(data['detailedRequirements'], 'String');
+      }
+      if (data.hasOwnProperty('finalSubmissionGuidelines')) {
+        obj['finalSubmissionGuidelines'] = ApiClient.convertToType(data['finalSubmissionGuidelines'], 'String');
+      }
+      if (data.hasOwnProperty('screeningScorecardId')) {
+        obj['screeningScorecardId'] = ApiClient.convertToType(data['screeningScorecardId'], 'Number');
+      }
+      if (data.hasOwnProperty('reviewScorecardId')) {
+        obj['reviewScorecardId'] = ApiClient.convertToType(data['reviewScorecardId'], 'Number');
+      }
+      if (data.hasOwnProperty('cmcTaskId')) {
+        obj['cmcTaskId'] = ApiClient.convertToType(data['cmcTaskId'], 'Number');
+      }
+      if (data.hasOwnProperty('numberOfCheckpointsPrizes')) {
+        obj['numberOfCheckpointsPrizes'] = ApiClient.convertToType(data['numberOfCheckpointsPrizes'], 'Integer');
+      }
+      if (data.hasOwnProperty('topCheckPointPrize')) {
+        obj['topCheckPointPrize'] = ApiClient.convertToType(data['topCheckPointPrize'], 'Number');
+      }
+      if (data.hasOwnProperty('postingDate')) {
+        obj['postingDate'] = ApiClient.convertToType(data['postingDate'], 'Date');
+      }
+      if (data.hasOwnProperty('registrationEndDate')) {
+        obj['registrationEndDate'] = ApiClient.convertToType(data['registrationEndDate'], 'Date');
+      }
+      if (data.hasOwnProperty('checkpointSubmissionEndDate')) {
+        obj['checkpointSubmissionEndDate'] = ApiClient.convertToType(data['checkpointSubmissionEndDate'], 'Date');
+      }
+      if (data.hasOwnProperty('submissionEndDate')) {
+        obj['submissionEndDate'] = ApiClient.convertToType(data['submissionEndDate'], 'Date');
+      }
+      if (data.hasOwnProperty('submissionsViewable')) {
+        obj['submissionsViewable'] = ApiClient.convertToType(data['submissionsViewable'], 'Boolean');
+      }
+      if (data.hasOwnProperty('reviewType')) {
+        obj['reviewType'] = ApiClient.convertToType(data['reviewType'], 'String');
+      }
+      if (data.hasOwnProperty('type')) {
+        obj['type'] = ApiClient.convertToType(data['type'], 'String');
+      }
+      if (data.hasOwnProperty('allowStockArt')) {
+        obj['allowStockArt'] = ApiClient.convertToType(data['allowStockArt'], 'String');
+      }
+      if (data.hasOwnProperty('filetypes')) {
+        obj['filetypes'] = ApiClient.convertToType(data['filetypes'], ['String']);
+      }
+      if (data.hasOwnProperty('forumLink')) {
+        obj['forumLink'] = ApiClient.convertToType(data['forumLink'], 'String');
+      }
+      if (data.hasOwnProperty('appealsEndDate')) {
+        obj['appealsEndDate'] = ApiClient.convertToType(data['appealsEndDate'], 'Date');
+      }
+      if (data.hasOwnProperty('finalFixEndDate')) {
+        obj['finalFixEndDate'] = ApiClient.convertToType(data['finalFixEndDate'], 'Date');
+      }
+      if (data.hasOwnProperty('submissionLimit')) {
+        obj['submissionLimit'] = ApiClient.convertToType(data['submissionLimit'], 'Integer');
+      }
+      if (data.hasOwnProperty('currentStatus')) {
+        obj['currentStatus'] = ApiClient.convertToType(data['currentStatus'], 'String');
+      }
+      if (data.hasOwnProperty('digitalRunPoints')) {
+        obj['digitalRunPoints'] = ApiClient.convertToType(data['digitalRunPoints'], 'Integer');
+      }
+      if (data.hasOwnProperty('reliabilityBonus')) {
+        obj['reliabilityBonus'] = ApiClient.convertToType(data['reliabilityBonus'], 'Number');
+      }
+      if (data.hasOwnProperty('challengeCommunity')) {
+        obj['challengeCommunity'] = ApiClient.convertToType(data['challengeCommunity'], 'String');
+      }
+      if (data.hasOwnProperty('directUrl')) {
+        obj['directUrl'] = ApiClient.convertToType(data['directUrl'], 'String');
+      }
+      if (data.hasOwnProperty('technology')) {
+        obj['technology'] = ApiClient.convertToType(data['technology'], ['String']);
+      }
+      if (data.hasOwnProperty('prize')) {
+        obj['prize'] = ApiClient.convertToType(data['prize'], ['Number']);
+      }
+      if (data.hasOwnProperty('winners')) {
+        obj['winners'] = ApiClient.convertToType(data['winners'], [InlineResponse2002ResultContentWinners]);
+      }
+      if (data.hasOwnProperty('currentPhaseName')) {
+        obj['currentPhaseName'] = ApiClient.convertToType(data['currentPhaseName'], 'String');
+      }
+      if (data.hasOwnProperty('currentPhaseRemainingTime')) {
+        obj['currentPhaseRemainingTime'] = ApiClient.convertToType(data['currentPhaseRemainingTime'], 'Number');
+      }
+      if (data.hasOwnProperty('currentPhaseEndDate')) {
+        obj['currentPhaseEndDate'] = ApiClient.convertToType(data['currentPhaseEndDate'], 'Date');
+      }
+      if (data.hasOwnProperty('Document')) {
+        obj['Document'] = ApiClient.convertToType(data['Document'], [InlineResponse2002ResultContentDocument]);
+      }
+      if (data.hasOwnProperty('platforms')) {
+        obj['platforms'] = ApiClient.convertToType(data['platforms'], ['String']);
+      }
+      if (data.hasOwnProperty('event')) {
+        obj['event'] = ApiClient.convertToType(data['event'], [InlineResponse2002ResultContentEvent]);
+      }
+      if (data.hasOwnProperty('copilotDetailedRequirements')) {
+        obj['copilotDetailedRequirements'] = ApiClient.convertToType(data['copilotDetailedRequirements'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * the phase type
-   * @member {module:model/InlineResponse2002ResultContent.PhaseTypeEnum} phaseType
+   * @member {String} challengeType
    */
-  exports.prototype['phaseType'] = undefined;
+  exports.prototype['challengeType'] = undefined;
   /**
-   * the status
-   * @member {module:model/InlineResponse2002ResultContent.StatusEnum} status
+   * @member {String} challengeName
    */
-  exports.prototype['status'] = undefined;
+  exports.prototype['challengeName'] = undefined;
   /**
-   * fixed start time ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ)
-   * @member {Date} fixedStarTime
+   * @member {Number} challengeId
    */
-  exports.prototype['fixedStarTime'] = undefined;
+  exports.prototype['challengeId'] = undefined;
   /**
-   * the scheduled start time ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ)
-   * @member {Date} scheduledStarTime
+   * @member {Number} projectId
    */
-  exports.prototype['scheduledStarTime'] = undefined;
+  exports.prototype['projectId'] = undefined;
   /**
-   * the scheduled end time ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ)
-   * @member {Date} scheduledEndTime
+   * @member {Number} forumId
    */
-  exports.prototype['scheduledEndTime'] = undefined;
+  exports.prototype['forumId'] = undefined;
   /**
-   * the actual start time ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ)
-   * @member {Date} actualStartTime
+   * @member {String} introduction
    */
-  exports.prototype['actualStartTime'] = undefined;
+  exports.prototype['introduction'] = undefined;
   /**
-   * the actual end time ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ)
-   * @member {Date} actualEndTime
+   * @member {String} round1Introduction
    */
-  exports.prototype['actualEndTime'] = undefined;
+  exports.prototype['round1Introduction'] = undefined;
   /**
-   * the duration
-   * @member {String} duration
+   * @member {String} round2Introduction
    */
-  exports.prototype['duration'] = undefined;
+  exports.prototype['round2Introduction'] = undefined;
+  /**
+   * @member {String} detailedRequirements
+   */
+  exports.prototype['detailedRequirements'] = undefined;
+  /**
+   * @member {String} finalSubmissionGuidelines
+   */
+  exports.prototype['finalSubmissionGuidelines'] = undefined;
+  /**
+   * @member {Number} screeningScorecardId
+   */
+  exports.prototype['screeningScorecardId'] = undefined;
+  /**
+   * @member {Number} reviewScorecardId
+   */
+  exports.prototype['reviewScorecardId'] = undefined;
+  /**
+   * @member {Number} cmcTaskId
+   */
+  exports.prototype['cmcTaskId'] = undefined;
+  /**
+   * @member {Integer} numberOfCheckpointsPrizes
+   */
+  exports.prototype['numberOfCheckpointsPrizes'] = undefined;
+  /**
+   * @member {Number} topCheckPointPrize
+   */
+  exports.prototype['topCheckPointPrize'] = undefined;
+  /**
+   * @member {Date} postingDate
+   */
+  exports.prototype['postingDate'] = undefined;
+  /**
+   * @member {Date} registrationEndDate
+   */
+  exports.prototype['registrationEndDate'] = undefined;
+  /**
+   * @member {Date} checkpointSubmissionEndDate
+   */
+  exports.prototype['checkpointSubmissionEndDate'] = undefined;
+  /**
+   * @member {Date} submissionEndDate
+   */
+  exports.prototype['submissionEndDate'] = undefined;
+  /**
+   * @member {Boolean} submissionsViewable
+   */
+  exports.prototype['submissionsViewable'] = undefined;
+  /**
+   * @member {String} reviewType
+   */
+  exports.prototype['reviewType'] = undefined;
+  /**
+   * @member {String} type
+   */
+  exports.prototype['type'] = undefined;
+  /**
+   * @member {String} allowStockArt
+   */
+  exports.prototype['allowStockArt'] = undefined;
+  /**
+   * @member {Array.<String>} filetypes
+   */
+  exports.prototype['filetypes'] = undefined;
+  /**
+   * @member {String} forumLink
+   */
+  exports.prototype['forumLink'] = undefined;
+  /**
+   * @member {Date} appealsEndDate
+   */
+  exports.prototype['appealsEndDate'] = undefined;
+  /**
+   * @member {Date} finalFixEndDate
+   */
+  exports.prototype['finalFixEndDate'] = undefined;
+  /**
+   * @member {Integer} submissionLimit
+   */
+  exports.prototype['submissionLimit'] = undefined;
+  /**
+   * @member {String} currentStatus
+   */
+  exports.prototype['currentStatus'] = undefined;
+  /**
+   * @member {Integer} digitalRunPoints
+   */
+  exports.prototype['digitalRunPoints'] = undefined;
+  /**
+   * @member {Number} reliabilityBonus
+   */
+  exports.prototype['reliabilityBonus'] = undefined;
+  /**
+   * @member {String} challengeCommunity
+   */
+  exports.prototype['challengeCommunity'] = undefined;
+  /**
+   * @member {String} directUrl
+   */
+  exports.prototype['directUrl'] = undefined;
+  /**
+   * @member {Array.<String>} technology
+   */
+  exports.prototype['technology'] = undefined;
+  /**
+   * @member {Array.<Number>} prize
+   */
+  exports.prototype['prize'] = undefined;
+  /**
+   * @member {Array.<module:model/InlineResponse2002ResultContentWinners>} winners
+   */
+  exports.prototype['winners'] = undefined;
+  /**
+   * @member {String} currentPhaseName
+   */
+  exports.prototype['currentPhaseName'] = undefined;
+  /**
+   * @member {Number} currentPhaseRemainingTime
+   */
+  exports.prototype['currentPhaseRemainingTime'] = undefined;
+  /**
+   * @member {Date} currentPhaseEndDate
+   */
+  exports.prototype['currentPhaseEndDate'] = undefined;
+  /**
+   * @member {Array.<module:model/InlineResponse2002ResultContentDocument>} Document
+   */
+  exports.prototype['Document'] = undefined;
+  /**
+   * @member {Array.<String>} platforms
+   */
+  exports.prototype['platforms'] = undefined;
+  /**
+   * @member {Array.<module:model/InlineResponse2002ResultContentEvent>} event
+   */
+  exports.prototype['event'] = undefined;
+  /**
+   * @member {String} copilotDetailedRequirements
+   */
+  exports.prototype['copilotDetailedRequirements'] = undefined;
 
-
-  /**
-   * Allowed values for the <code>phaseType</code> property.
-   * @enum {String}
-   * @readonly
-   */
-  exports.PhaseTypeEnum = {
-    /**
-     * value: "Registration"
-     * @const
-     */
-    "Registration": "Registration",
-    /**
-     * value: "Submission"
-     * @const
-     */
-    "Submission": "Submission",
-    /**
-     * value: "Screening"
-     * @const
-     */
-    "Screening": "Screening",
-    /**
-     * value: "Review"
-     * @const
-     */
-    "Review": "Review",
-    /**
-     * value: "Appeals"
-     * @const
-     */
-    "Appeals": "Appeals",
-    /**
-     * value: "Appeals Response"
-     * @const
-     */
-    "Appeals Response": "Appeals Response",
-    /**
-     * value: "Aggregation"
-     * @const
-     */
-    "Aggregation": "Aggregation",
-    /**
-     * value: "Aggregation Review"
-     * @const
-     */
-    "Aggregation Review": "Aggregation Review",
-    /**
-     * value: "Final Fix"
-     * @const
-     */
-    "Final Fix": "Final Fix",
-    /**
-     * value: "Final Review"
-     * @const
-     */
-    "Final Review": "Final Review",
-    /**
-     * value: "Approval"
-     * @const
-     */
-    "Approval": "Approval",
-    /**
-     * value: "Post-Mortem"
-     * @const
-     */
-    "Post-Mortem": "Post-Mortem",
-    /**
-     * value: "Specification Submission"
-     * @const
-     */
-    "Specification Submission": "Specification Submission",
-    /**
-     * value: "Specification Review"
-     * @const
-     */
-    "Specification Review": "Specification Review",
-    /**
-     * value: "Checkpoint Submission"
-     * @const
-     */
-    "Checkpoint Submission": "Checkpoint Submission",
-    /**
-     * value: "Checkpoint Screening"
-     * @const
-     */
-    "Checkpoint Screening": "Checkpoint Screening",
-    /**
-     * value: "Checkpoint Review"
-     * @const
-     */
-    "Checkpoint Review": "Checkpoint Review",
-    /**
-     * value: "Iterative Review"
-     * @const
-     */
-    "Iterative Review": "Iterative Review"  };
-
-  /**
-   * Allowed values for the <code>status</code> property.
-   * @enum {String}
-   * @readonly
-   */
-  exports.StatusEnum = {
-    /**
-     * value: "Scheduled"
-     * @const
-     */
-    "Scheduled": "Scheduled",
-    /**
-     * value: "Open"
-     * @const
-     */
-    "Open": "Open",
-    /**
-     * value: "Closed"
-     * @const
-     */
-    "Closed": "Closed"  };
 
 
   return exports;

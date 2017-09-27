@@ -3,69 +3,48 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**phaseType** | **String** | the phase type | [optional] 
-**status** | **String** | the status | [optional] 
-**fixedStarTime** | **Date** | fixed start time ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ) | [optional] 
-**scheduledStarTime** | **Date** | the scheduled start time ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ) | [optional] 
-**scheduledEndTime** | **Date** | the scheduled end time ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ) | [optional] 
-**actualStartTime** | **Date** | the actual start time ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ) | [optional] 
-**actualEndTime** | **Date** | the actual end time ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ) | [optional] 
-**duration** | **String** | the duration | [optional] 
-
-
-<a name="PhaseTypeEnum"></a>
-## Enum: PhaseTypeEnum
-
-
-* `Registration` (value: `"Registration"`)
-
-* `Submission` (value: `"Submission"`)
-
-* `Screening` (value: `"Screening"`)
-
-* `Review` (value: `"Review"`)
-
-* `Appeals` (value: `"Appeals"`)
-
-* `Appeals Response` (value: `"Appeals Response"`)
-
-* `Aggregation` (value: `"Aggregation"`)
-
-* `Aggregation Review` (value: `"Aggregation Review"`)
-
-* `Final Fix` (value: `"Final Fix"`)
-
-* `Final Review` (value: `"Final Review"`)
-
-* `Approval` (value: `"Approval"`)
-
-* `Post-Mortem` (value: `"Post-Mortem"`)
-
-* `Specification Submission` (value: `"Specification Submission"`)
-
-* `Specification Review` (value: `"Specification Review"`)
-
-* `Checkpoint Submission` (value: `"Checkpoint Submission"`)
-
-* `Checkpoint Screening` (value: `"Checkpoint Screening"`)
-
-* `Checkpoint Review` (value: `"Checkpoint Review"`)
-
-* `Iterative Review` (value: `"Iterative Review"`)
-
-
-
-
-<a name="StatusEnum"></a>
-## Enum: StatusEnum
-
-
-* `Scheduled` (value: `"Scheduled"`)
-
-* `Open` (value: `"Open"`)
-
-* `Closed` (value: `"Closed"`)
-
-
+**challengeType** | **String** |  | [optional] 
+**challengeName** | **String** |  | [optional] 
+**challengeId** | **Number** |  | [optional] 
+**projectId** | **Number** |  | [optional] 
+**forumId** | **Number** |  | [optional] 
+**introduction** | **String** |  | [optional] 
+**round1Introduction** | **String** |  | [optional] 
+**round2Introduction** | **String** |  | [optional] 
+**detailedRequirements** | **String** |  | [optional] 
+**finalSubmissionGuidelines** | **String** |  | [optional] 
+**screeningScorecardId** | **Number** |  | [optional] 
+**reviewScorecardId** | **Number** |  | [optional] 
+**cmcTaskId** | **Number** |  | [optional] 
+**numberOfCheckpointsPrizes** | **Integer** |  | [optional] 
+**topCheckPointPrize** | **Number** |  | [optional] 
+**postingDate** | **Date** |  | [optional] 
+**registrationEndDate** | **Date** |  | [optional] 
+**checkpointSubmissionEndDate** | **Date** |  | [optional] 
+**submissionEndDate** | **Date** |  | [optional] 
+**submissionsViewable** | **Boolean** |  | [optional] 
+**reviewType** | **String** |  | [optional] 
+**type** | **String** |  | [optional] 
+**allowStockArt** | **String** |  | [optional] 
+**filetypes** | **[String]** |  | [optional] 
+**forumLink** | **String** |  | [optional] 
+**appealsEndDate** | **Date** |  | [optional] 
+**finalFixEndDate** | **Date** |  | [optional] 
+**submissionLimit** | **Integer** |  | [optional] 
+**currentStatus** | **String** |  | [optional] 
+**digitalRunPoints** | **Integer** |  | [optional] 
+**reliabilityBonus** | **Number** |  | [optional] 
+**challengeCommunity** | **String** |  | [optional] 
+**directUrl** | **String** |  | [optional] 
+**technology** | **[String]** |  | [optional] 
+**prize** | **[Number]** |  | [optional] 
+**winners** | [**[InlineResponse2002ResultContentWinners]**](InlineResponse2002ResultContentWinners.md) |  | [optional] 
+**currentPhaseName** | **String** |  | [optional] 
+**currentPhaseRemainingTime** | **Number** |  | [optional] 
+**currentPhaseEndDate** | **Date** |  | [optional] 
+**document** | [**[InlineResponse2002ResultContentDocument]**](InlineResponse2002ResultContentDocument.md) |  | [optional] 
+**platforms** | **[String]** |  | [optional] 
+**event** | [**[InlineResponse2002ResultContentEvent]**](InlineResponse2002ResultContentEvent.md) |  | [optional] 
+**copilotDetailedRequirements** | **String** |  | [optional] 
 
 

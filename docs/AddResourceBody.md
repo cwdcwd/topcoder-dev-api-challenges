@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**roleId** | **Number** |  | 
-**resourceUserId** | **Number** |  | 
-**phaseId** | **Number** |  | [optional] 
+**roleId** | **Integer** |  | 
+**resourceUserId** | **Integer** |  | 
+**phaseId** | **Integer** |  | [optional] 
 **addNotification** | **Boolean** |  | [optional] 
 **addForumWatch** | **Boolean** |  | [optional] 
 **isStudio** | **Boolean** |  | [optional] 

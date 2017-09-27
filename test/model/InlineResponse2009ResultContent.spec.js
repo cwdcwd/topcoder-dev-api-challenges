@@ -9,6 +9,17 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 (function(root, factory) {
@@ -54,20 +65,8 @@
       //expect(instance).to.be.a(ApChallengeMicroservice.InlineResponse2009ResultContent);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instane = new ApChallengeMicroservice.InlineResponse2009ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instane = new ApChallengeMicroservice.InlineResponse2009ResultContent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
+    it('should have the property phaseType (base name: "phaseType")', function() {
+      // uncomment below and update the code to test the property phaseType
       //var instane = new ApChallengeMicroservice.InlineResponse2009ResultContent();
       //expect(instance).to.be();
     });
@@ -78,38 +77,38 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property startDate (base name: "startDate")', function() {
-      // uncomment below and update the code to test the property startDate
+    it('should have the property fixedStarTime (base name: "fixedStarTime")', function() {
+      // uncomment below and update the code to test the property fixedStarTime
       //var instane = new ApChallengeMicroservice.InlineResponse2009ResultContent();
       //expect(instance).to.be();
     });
 
-    it('should have the property endDate (base name: "endDate")', function() {
-      // uncomment below and update the code to test the property endDate
+    it('should have the property scheduledStarTime (base name: "scheduledStarTime")', function() {
+      // uncomment below and update the code to test the property scheduledStarTime
       //var instane = new ApChallengeMicroservice.InlineResponse2009ResultContent();
       //expect(instance).to.be();
     });
 
-    it('should have the property track (base name: "track")', function() {
-      // uncomment below and update the code to test the property track
+    it('should have the property scheduledEndTime (base name: "scheduledEndTime")', function() {
+      // uncomment below and update the code to test the property scheduledEndTime
       //var instane = new ApChallengeMicroservice.InlineResponse2009ResultContent();
       //expect(instance).to.be();
     });
 
-    it('should have the property subTrack (base name: "subTrack")', function() {
-      // uncomment below and update the code to test the property subTrack
+    it('should have the property actualStartTime (base name: "actualStartTime")', function() {
+      // uncomment below and update the code to test the property actualStartTime
       //var instane = new ApChallengeMicroservice.InlineResponse2009ResultContent();
       //expect(instance).to.be();
     });
 
-    it('should have the property numRegistrants (base name: "numRegistrants")', function() {
-      // uncomment below and update the code to test the property numRegistrants
+    it('should have the property actualEndTime (base name: "actualEndTime")', function() {
+      // uncomment below and update the code to test the property actualEndTime
       //var instane = new ApChallengeMicroservice.InlineResponse2009ResultContent();
       //expect(instance).to.be();
     });
 
-    it('should have the property rounds (base name: "rounds")', function() {
-      // uncomment below and update the code to test the property rounds
+    it('should have the property duration (base name: "duration")', function() {
+      // uncomment below and update the code to test the property duration
       //var instane = new ApChallengeMicroservice.InlineResponse2009ResultContent();
       //expect(instance).to.be();
     });

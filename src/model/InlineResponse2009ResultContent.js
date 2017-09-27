@@ -9,23 +9,34 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2009ResultRounds'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse2009ResultRounds'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.ApChallengeMicroservice) {
       root.ApChallengeMicroservice = {};
     }
-    root.ApChallengeMicroservice.InlineResponse2009ResultContent = factory(root.ApChallengeMicroservice.ApiClient, root.ApChallengeMicroservice.InlineResponse2009ResultRounds);
+    root.ApChallengeMicroservice.InlineResponse2009ResultContent = factory(root.ApChallengeMicroservice.ApiClient);
   }
-}(this, function(ApiClient, InlineResponse2009ResultRounds) {
+}(this, function(ApiClient) {
   'use strict';
 
 
@@ -53,8 +64,6 @@
 
 
 
-
-
   };
 
   /**
@@ -68,83 +77,194 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-      }
-      if (data.hasOwnProperty('name')) {
-        obj['name'] = ApiClient.convertToType(data['name'], 'String');
-      }
-      if (data.hasOwnProperty('type')) {
-        obj['type'] = ApiClient.convertToType(data['type'], 'String');
+      if (data.hasOwnProperty('phaseType')) {
+        obj['phaseType'] = ApiClient.convertToType(data['phaseType'], 'String');
       }
       if (data.hasOwnProperty('status')) {
         obj['status'] = ApiClient.convertToType(data['status'], 'String');
       }
-      if (data.hasOwnProperty('startDate')) {
-        obj['startDate'] = ApiClient.convertToType(data['startDate'], 'Date');
+      if (data.hasOwnProperty('fixedStarTime')) {
+        obj['fixedStarTime'] = ApiClient.convertToType(data['fixedStarTime'], 'Date');
       }
-      if (data.hasOwnProperty('endDate')) {
-        obj['endDate'] = ApiClient.convertToType(data['endDate'], 'Date');
+      if (data.hasOwnProperty('scheduledStarTime')) {
+        obj['scheduledStarTime'] = ApiClient.convertToType(data['scheduledStarTime'], 'Date');
       }
-      if (data.hasOwnProperty('track')) {
-        obj['track'] = ApiClient.convertToType(data['track'], 'String');
+      if (data.hasOwnProperty('scheduledEndTime')) {
+        obj['scheduledEndTime'] = ApiClient.convertToType(data['scheduledEndTime'], 'Date');
       }
-      if (data.hasOwnProperty('subTrack')) {
-        obj['subTrack'] = ApiClient.convertToType(data['subTrack'], 'String');
+      if (data.hasOwnProperty('actualStartTime')) {
+        obj['actualStartTime'] = ApiClient.convertToType(data['actualStartTime'], 'Date');
       }
-      if (data.hasOwnProperty('numRegistrants')) {
-        obj['numRegistrants'] = ApiClient.convertToType(data['numRegistrants'], ['Number']);
+      if (data.hasOwnProperty('actualEndTime')) {
+        obj['actualEndTime'] = ApiClient.convertToType(data['actualEndTime'], 'Date');
       }
-      if (data.hasOwnProperty('rounds')) {
-        obj['rounds'] = ApiClient.convertToType(data['rounds'], [InlineResponse2009ResultRounds]);
+      if (data.hasOwnProperty('duration')) {
+        obj['duration'] = ApiClient.convertToType(data['duration'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {Number} id
+   * the phase type
+   * @member {module:model/InlineResponse2009ResultContent.PhaseTypeEnum} phaseType
    */
-  exports.prototype['id'] = undefined;
+  exports.prototype['phaseType'] = undefined;
   /**
-   * @member {String} name
-   */
-  exports.prototype['name'] = undefined;
-  /**
-   * @member {String} type
-   */
-  exports.prototype['type'] = undefined;
-  /**
-   * @member {String} status
+   * the status
+   * @member {module:model/InlineResponse2009ResultContent.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
   /**
-   * ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ)
-   * @member {Date} startDate
+   * fixed start time ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ)
+   * @member {Date} fixedStarTime
    */
-  exports.prototype['startDate'] = undefined;
+  exports.prototype['fixedStarTime'] = undefined;
   /**
-   * ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ)
-   * @member {Date} endDate
+   * the scheduled start time ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ)
+   * @member {Date} scheduledStarTime
    */
-  exports.prototype['endDate'] = undefined;
+  exports.prototype['scheduledStarTime'] = undefined;
   /**
-   * @member {String} track
+   * the scheduled end time ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ)
+   * @member {Date} scheduledEndTime
    */
-  exports.prototype['track'] = undefined;
+  exports.prototype['scheduledEndTime'] = undefined;
   /**
-   * @member {String} subTrack
+   * the actual start time ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ)
+   * @member {Date} actualStartTime
    */
-  exports.prototype['subTrack'] = undefined;
+  exports.prototype['actualStartTime'] = undefined;
   /**
-   * @member {Array.<Number>} numRegistrants
+   * the actual end time ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ)
+   * @member {Date} actualEndTime
    */
-  exports.prototype['numRegistrants'] = undefined;
+  exports.prototype['actualEndTime'] = undefined;
   /**
-   * @member {Array.<module:model/InlineResponse2009ResultRounds>} rounds
+   * the duration
+   * @member {String} duration
    */
-  exports.prototype['rounds'] = undefined;
+  exports.prototype['duration'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>phaseType</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.PhaseTypeEnum = {
+    /**
+     * value: "Registration"
+     * @const
+     */
+    "Registration": "Registration",
+    /**
+     * value: "Submission"
+     * @const
+     */
+    "Submission": "Submission",
+    /**
+     * value: "Screening"
+     * @const
+     */
+    "Screening": "Screening",
+    /**
+     * value: "Review"
+     * @const
+     */
+    "Review": "Review",
+    /**
+     * value: "Appeals"
+     * @const
+     */
+    "Appeals": "Appeals",
+    /**
+     * value: "Appeals Response"
+     * @const
+     */
+    "Appeals Response": "Appeals Response",
+    /**
+     * value: "Aggregation"
+     * @const
+     */
+    "Aggregation": "Aggregation",
+    /**
+     * value: "Aggregation Review"
+     * @const
+     */
+    "Aggregation Review": "Aggregation Review",
+    /**
+     * value: "Final Fix"
+     * @const
+     */
+    "Final Fix": "Final Fix",
+    /**
+     * value: "Final Review"
+     * @const
+     */
+    "Final Review": "Final Review",
+    /**
+     * value: "Approval"
+     * @const
+     */
+    "Approval": "Approval",
+    /**
+     * value: "Post-Mortem"
+     * @const
+     */
+    "Post-Mortem": "Post-Mortem",
+    /**
+     * value: "Specification Submission"
+     * @const
+     */
+    "Specification Submission": "Specification Submission",
+    /**
+     * value: "Specification Review"
+     * @const
+     */
+    "Specification Review": "Specification Review",
+    /**
+     * value: "Checkpoint Submission"
+     * @const
+     */
+    "Checkpoint Submission": "Checkpoint Submission",
+    /**
+     * value: "Checkpoint Screening"
+     * @const
+     */
+    "Checkpoint Screening": "Checkpoint Screening",
+    /**
+     * value: "Checkpoint Review"
+     * @const
+     */
+    "Checkpoint Review": "Checkpoint Review",
+    /**
+     * value: "Iterative Review"
+     * @const
+     */
+    "Iterative Review": "Iterative Review"  };
+
+  /**
+   * Allowed values for the <code>status</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.StatusEnum = {
+    /**
+     * value: "Scheduled"
+     * @const
+     */
+    "Scheduled": "Scheduled",
+    /**
+     * value: "Open"
+     * @const
+     */
+    "Open": "Open",
+    /**
+     * value: "Closed"
+     * @const
+     */
+    "Closed": "Closed"  };
 
 
   return exports;

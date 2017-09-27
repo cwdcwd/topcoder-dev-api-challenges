@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **success** | **Boolean** |  | 
-**status** | **Number** |  | 
+**status** | **Integer** |  | 
 **metadata** | **Object** |  | 
 **content** | **Boolean** |  | 
 

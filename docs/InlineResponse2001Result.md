@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **success** | **Boolean** |  | [optional] 
-**status** | **Number** |  | [optional] 
+**status** | **Integer** |  | [optional] 
 **metadata** | **Object** |  | [optional] 
 **content** | [**[InlineResponse2001ResultContent]**](InlineResponse2001ResultContent.md) |  | [optional] 
 

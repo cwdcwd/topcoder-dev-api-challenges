@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **success** | **Boolean** |  | [optional] 
-**status** | **Number** |  | [optional] 
-**metadata** | **Object** |  | [optional] 
-**content** | [**[InlineResponse2003ResultContent]**](InlineResponse2003ResultContent.md) |  | [optional] 
+**status** | **Integer** |  | [optional] 
+**metadata** | [**InlineResponse2003ResultMetadata**](InlineResponse2003ResultMetadata.md) |  | [optional] 
+**content** | [**[DirectChallenge]**](DirectChallenge.md) |  | [optional] 
 
 

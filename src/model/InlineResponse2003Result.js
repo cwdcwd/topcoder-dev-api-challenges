@@ -9,23 +9,34 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2003ResultContent'], factory);
+    define(['ApiClient', 'model/DirectChallenge', 'model/InlineResponse2003ResultMetadata'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InlineResponse2003ResultContent'));
+    module.exports = factory(require('../ApiClient'), require('./DirectChallenge'), require('./InlineResponse2003ResultMetadata'));
   } else {
     // Browser globals (root is window)
     if (!root.ApChallengeMicroservice) {
       root.ApChallengeMicroservice = {};
     }
-    root.ApChallengeMicroservice.InlineResponse2003Result = factory(root.ApChallengeMicroservice.ApiClient, root.ApChallengeMicroservice.InlineResponse2003ResultContent);
+    root.ApChallengeMicroservice.InlineResponse2003Result = factory(root.ApChallengeMicroservice.ApiClient, root.ApChallengeMicroservice.DirectChallenge, root.ApChallengeMicroservice.InlineResponse2003ResultMetadata);
   }
-}(this, function(ApiClient, InlineResponse2003ResultContent) {
+}(this, function(ApiClient, DirectChallenge, InlineResponse2003ResultMetadata) {
   'use strict';
 
 
@@ -66,13 +77,13 @@
         obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
       }
       if (data.hasOwnProperty('status')) {
-        obj['status'] = ApiClient.convertToType(data['status'], 'Number');
+        obj['status'] = ApiClient.convertToType(data['status'], 'Integer');
       }
       if (data.hasOwnProperty('metadata')) {
-        obj['metadata'] = ApiClient.convertToType(data['metadata'], Object);
+        obj['metadata'] = InlineResponse2003ResultMetadata.constructFromObject(data['metadata']);
       }
       if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], [InlineResponse2003ResultContent]);
+        obj['content'] = ApiClient.convertToType(data['content'], [DirectChallenge]);
       }
     }
     return obj;
@@ -83,15 +94,15 @@
    */
   exports.prototype['success'] = undefined;
   /**
-   * @member {Number} status
+   * @member {Integer} status
    */
   exports.prototype['status'] = undefined;
   /**
-   * @member {Object} metadata
+   * @member {module:model/InlineResponse2003ResultMetadata} metadata
    */
   exports.prototype['metadata'] = undefined;
   /**
-   * @member {Array.<module:model/InlineResponse2003ResultContent>} content
+   * @member {Array.<module:model/DirectChallenge>} content
    */
   exports.prototype['content'] = undefined;
 

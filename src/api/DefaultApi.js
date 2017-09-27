@@ -9,23 +9,34 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddResourceBody', 'model/ChallengeResponse', 'model/ErrorModel', 'model/GetResourceResponse', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/InlineResponse2002', 'model/InlineResponse2003', 'model/InlineResponse2004', 'model/InlineResponse2005', 'model/InlineResponse2006', 'model/InlineResponse2007', 'model/InlineResponse2008', 'model/InlineResponse2009', 'model/ManageResourceResponse', 'model/NewChallengeBodyParam', 'model/NewPlatformBodyParam', 'model/NewTechnologyBodyParam', 'model/NormalResponse', 'model/NullResponse', 'model/PlatformArrayResponse', 'model/PlatformResponse', 'model/RemoveResourceBody', 'model/TechnologyArrayResponse', 'model/TechnologyResponse', 'model/ValidationErrorModel'], factory);
+    define(['ApiClient', 'model/ErrorModel', 'model/ValidationErrorModel', 'model/ChallengeResponse', 'model/NullResponse', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/InlineResponse2002', 'model/UpdateChallengeBodyParam', 'model/RemoveResourceBody', 'model/ManageResourceResponse', 'model/GetResourceResponse', 'model/AddResourceBody', 'model/InlineResponse2003', 'model/ChallengeTypeResponse', 'model/InlineResponse2004', 'model/InlineResponse2005', 'model/InlineResponse2006', 'model/InlineResponse2007', 'model/InlineResponse2008', 'model/InlineResponse2009', 'model/PlatformArrayResponse', 'model/NormalResponse', 'model/PlatformResponse', 'model/NewPlatformBodyParam', 'model/NewChallengeBodyParam', 'model/InlineResponse20010', 'model/InlineResponse20011', 'model/TechnologyArrayResponse', 'model/TechnologyResponse', 'model/NewTechnologyBodyParam'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AddResourceBody'), require('../model/ChallengeResponse'), require('../model/ErrorModel'), require('../model/GetResourceResponse'), require('../model/InlineResponse200'), require('../model/InlineResponse2001'), require('../model/InlineResponse2002'), require('../model/InlineResponse2003'), require('../model/InlineResponse2004'), require('../model/InlineResponse2005'), require('../model/InlineResponse2006'), require('../model/InlineResponse2007'), require('../model/InlineResponse2008'), require('../model/InlineResponse2009'), require('../model/ManageResourceResponse'), require('../model/NewChallengeBodyParam'), require('../model/NewPlatformBodyParam'), require('../model/NewTechnologyBodyParam'), require('../model/NormalResponse'), require('../model/NullResponse'), require('../model/PlatformArrayResponse'), require('../model/PlatformResponse'), require('../model/RemoveResourceBody'), require('../model/TechnologyArrayResponse'), require('../model/TechnologyResponse'), require('../model/ValidationErrorModel'));
+    module.exports = factory(require('../ApiClient'), require('../model/ErrorModel'), require('../model/ValidationErrorModel'), require('../model/ChallengeResponse'), require('../model/NullResponse'), require('../model/InlineResponse200'), require('../model/InlineResponse2001'), require('../model/InlineResponse2002'), require('../model/UpdateChallengeBodyParam'), require('../model/RemoveResourceBody'), require('../model/ManageResourceResponse'), require('../model/GetResourceResponse'), require('../model/AddResourceBody'), require('../model/InlineResponse2003'), require('../model/ChallengeTypeResponse'), require('../model/InlineResponse2004'), require('../model/InlineResponse2005'), require('../model/InlineResponse2006'), require('../model/InlineResponse2007'), require('../model/InlineResponse2008'), require('../model/InlineResponse2009'), require('../model/PlatformArrayResponse'), require('../model/NormalResponse'), require('../model/PlatformResponse'), require('../model/NewPlatformBodyParam'), require('../model/NewChallengeBodyParam'), require('../model/InlineResponse20010'), require('../model/InlineResponse20011'), require('../model/TechnologyArrayResponse'), require('../model/TechnologyResponse'), require('../model/NewTechnologyBodyParam'));
   } else {
     // Browser globals (root is window)
     if (!root.ApChallengeMicroservice) {
       root.ApChallengeMicroservice = {};
     }
-    root.ApChallengeMicroservice.DefaultApi = factory(root.ApChallengeMicroservice.ApiClient, root.ApChallengeMicroservice.AddResourceBody, root.ApChallengeMicroservice.ChallengeResponse, root.ApChallengeMicroservice.ErrorModel, root.ApChallengeMicroservice.GetResourceResponse, root.ApChallengeMicroservice.InlineResponse200, root.ApChallengeMicroservice.InlineResponse2001, root.ApChallengeMicroservice.InlineResponse2002, root.ApChallengeMicroservice.InlineResponse2003, root.ApChallengeMicroservice.InlineResponse2004, root.ApChallengeMicroservice.InlineResponse2005, root.ApChallengeMicroservice.InlineResponse2006, root.ApChallengeMicroservice.InlineResponse2007, root.ApChallengeMicroservice.InlineResponse2008, root.ApChallengeMicroservice.InlineResponse2009, root.ApChallengeMicroservice.ManageResourceResponse, root.ApChallengeMicroservice.NewChallengeBodyParam, root.ApChallengeMicroservice.NewPlatformBodyParam, root.ApChallengeMicroservice.NewTechnologyBodyParam, root.ApChallengeMicroservice.NormalResponse, root.ApChallengeMicroservice.NullResponse, root.ApChallengeMicroservice.PlatformArrayResponse, root.ApChallengeMicroservice.PlatformResponse, root.ApChallengeMicroservice.RemoveResourceBody, root.ApChallengeMicroservice.TechnologyArrayResponse, root.ApChallengeMicroservice.TechnologyResponse, root.ApChallengeMicroservice.ValidationErrorModel);
+    root.ApChallengeMicroservice.DefaultApi = factory(root.ApChallengeMicroservice.ApiClient, root.ApChallengeMicroservice.ErrorModel, root.ApChallengeMicroservice.ValidationErrorModel, root.ApChallengeMicroservice.ChallengeResponse, root.ApChallengeMicroservice.NullResponse, root.ApChallengeMicroservice.InlineResponse200, root.ApChallengeMicroservice.InlineResponse2001, root.ApChallengeMicroservice.InlineResponse2002, root.ApChallengeMicroservice.UpdateChallengeBodyParam, root.ApChallengeMicroservice.RemoveResourceBody, root.ApChallengeMicroservice.ManageResourceResponse, root.ApChallengeMicroservice.GetResourceResponse, root.ApChallengeMicroservice.AddResourceBody, root.ApChallengeMicroservice.InlineResponse2003, root.ApChallengeMicroservice.ChallengeTypeResponse, root.ApChallengeMicroservice.InlineResponse2004, root.ApChallengeMicroservice.InlineResponse2005, root.ApChallengeMicroservice.InlineResponse2006, root.ApChallengeMicroservice.InlineResponse2007, root.ApChallengeMicroservice.InlineResponse2008, root.ApChallengeMicroservice.InlineResponse2009, root.ApChallengeMicroservice.PlatformArrayResponse, root.ApChallengeMicroservice.NormalResponse, root.ApChallengeMicroservice.PlatformResponse, root.ApChallengeMicroservice.NewPlatformBodyParam, root.ApChallengeMicroservice.NewChallengeBodyParam, root.ApChallengeMicroservice.InlineResponse20010, root.ApChallengeMicroservice.InlineResponse20011, root.ApChallengeMicroservice.TechnologyArrayResponse, root.ApChallengeMicroservice.TechnologyResponse, root.ApChallengeMicroservice.NewTechnologyBodyParam);
   }
-}(this, function(ApiClient, AddResourceBody, ChallengeResponse, ErrorModel, GetResourceResponse, InlineResponse200, InlineResponse2001, InlineResponse2002, InlineResponse2003, InlineResponse2004, InlineResponse2005, InlineResponse2006, InlineResponse2007, InlineResponse2008, InlineResponse2009, ManageResourceResponse, NewChallengeBodyParam, NewPlatformBodyParam, NewTechnologyBodyParam, NormalResponse, NullResponse, PlatformArrayResponse, PlatformResponse, RemoveResourceBody, TechnologyArrayResponse, TechnologyResponse, ValidationErrorModel) {
+}(this, function(ApiClient, ErrorModel, ValidationErrorModel, ChallengeResponse, NullResponse, InlineResponse200, InlineResponse2001, InlineResponse2002, UpdateChallengeBodyParam, RemoveResourceBody, ManageResourceResponse, GetResourceResponse, AddResourceBody, InlineResponse2003, ChallengeTypeResponse, InlineResponse2004, InlineResponse2005, InlineResponse2006, InlineResponse2007, InlineResponse2008, InlineResponse2009, PlatformArrayResponse, NormalResponse, PlatformResponse, NewPlatformBodyParam, NewChallengeBodyParam, InlineResponse20010, InlineResponse20011, TechnologyArrayResponse, TechnologyResponse, NewTechnologyBodyParam) {
   'use strict';
 
   /**
@@ -64,7 +75,7 @@
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw new Error("Missing the required parameter 'id' when calling activateChallenge");
+        throw "Missing the required parameter 'id' when calling activateChallenge";
       }
 
 
@@ -109,7 +120,7 @@
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw new Error("Missing the required parameter 'id' when calling cancelPrivateContest");
+        throw "Missing the required parameter 'id' when calling cancelPrivateContest";
       }
 
 
@@ -139,66 +150,20 @@
      * Callback function to receive the result of the challengeResultsGet operation.
      * @callback module:api/DefaultApi~challengeResultsGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2001} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Retrieves results of dev and design challenges.  These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases. 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.filter fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + userId - filter by challenges in which the user has a role + challengeId - id of the challenge for which to return the results. 
-     * @param {Number} opts.offset number of items to skip. Defaults to 0
-     * @param {Number} opts.limit max records to return. Defaults to 10
-     * @param {module:api/DefaultApi~challengeResultsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2001}
-     */
-    this.challengeResultsGet = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'filter': opts['filter'],
-        'offset': opts['offset'],
-        'limit': opts['limit']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['bearer'];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = InlineResponse2001;
-
-      return this.apiClient.callApi(
-        '/challengeResults', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the challengesGet operation.
-     * @callback module:api/DefaultApi~challengesGetCallback
-     * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse200} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Retrieve active/past results for dev/design/data science challenges.  This endpoint serves results based on filter variable list_type ( active/past) and filter variable type ( data_science / develop /design ). 
+     * Retrieves results of dev and design challenges. These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.filter fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec  + userId - Filter by user_id + challengeType + challengeName - Challenge Name + challengeId + platforms + technologies + reviewType + prizeLowerBound + prizeUpperBound + submissionEndFrom + submissionEndTo + projectId - Filter by Direct project id + projectName - Filter by Direct project name, only available for admin + isTask - Filter by isTask field 
-     * @param {Number} opts.offset number of items to skip. Defaults to 0
-     * @param {Number} opts.limit max records to return. Defaults to 10
-     * @param {module:api/DefaultApi~challengesGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {String} opts.filter fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + userId - filter by challenges in which the user has a role + challengeId - id of the challenge for which to return the results. 
+     * @param {Integer} opts.offset number of items to skip. Defaults to 0
+     * @param {Integer} opts.limit max records to return. Defaults to 10
+     * @param {module:api/DefaultApi~challengeResultsGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse200}
      */
-    this.challengesGet = function(opts, callback) {
+    this.challengeResultsGet = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -221,7 +186,149 @@
       var returnType = InlineResponse200;
 
       return this.apiClient.callApi(
+        '/challengeResults', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the challengesGet operation.
+     * @callback module:api/DefaultApi~challengesGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2001} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve active/past results for dev/design/data science challenges.  This endpoint serves results based on filter variable list_type ( active/past) and filter variable type ( data_science / develop /design ). 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.filter fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec  + userId - Filter by user_id + challengeType + challengeName - Challenge Name + challengeId + platforms + technologies + reviewType + prizeLowerBound + prizeUpperBound + submissionEndFrom + submissionEndTo + projectId - Filter by Direct project id + projectName - Filter by Direct project name, only available for admin + isTask - Filter by isTask field + groupIds - Filter by the group ids, it will only be used and when the API is called with authenticated user.  The value should be ids separated by comma. 
+     * @param {Integer} opts.offset number of items to skip. Defaults to 0
+     * @param {Integer} opts.limit max records to return. Defaults to 10
+     * @param {module:api/DefaultApi~challengesGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2001}
+     */
+    this.challengesGet = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'filter': opts['filter'],
+        'offset': opts['offset'],
+        'limit': opts['limit']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['bearer'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = InlineResponse2001;
+
+      return this.apiClient.callApi(
         '/challenges', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the challengesIdGet operation.
+     * @callback module:api/DefaultApi~challengesIdGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2002} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get challenge details.
+     * @param {Number} id The challenge id to get the challenge details.
+     * @param {module:api/DefaultApi~challengesIdGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2002}
+     */
+    this.challengesIdGet = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling challengesIdGet";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['bearer'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = InlineResponse2002;
+
+      return this.apiClient.callApi(
+        '/challenges/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the challengesIdPut operation.
+     * @callback module:api/DefaultApi~challengesIdPutCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ChallengeResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update the challenge
+     * @param {Number} id The id of the challenge.
+     * @param {module:model/UpdateChallengeBodyParam} body 
+     * @param {module:api/DefaultApi~challengesIdPutCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ChallengeResponse}
+     */
+    this.challengesIdPut = function(id, body, callback) {
+      var postBody = body;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling challengesIdPut";
+      }
+
+      // verify the required parameter 'body' is set
+      if (body == undefined || body == null) {
+        throw "Missing the required parameter 'body' when calling challengesIdPut";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['bearer'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = ChallengeResponse;
+
+      return this.apiClient.callApi(
+        '/challenges/{id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -247,12 +354,12 @@
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw new Error("Missing the required parameter 'id' when calling challengesIdResourcesDelete");
+        throw "Missing the required parameter 'id' when calling challengesIdResourcesDelete";
       }
 
       // verify the required parameter 'body' is set
       if (body == undefined || body == null) {
-        throw new Error("Missing the required parameter 'body' when calling challengesIdResourcesDelete");
+        throw "Missing the required parameter 'body' when calling challengesIdResourcesDelete";
       }
 
 
@@ -297,7 +404,7 @@
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw new Error("Missing the required parameter 'id' when calling challengesIdResourcesGet");
+        throw "Missing the required parameter 'id' when calling challengesIdResourcesGet";
       }
 
 
@@ -343,12 +450,12 @@
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw new Error("Missing the required parameter 'id' when calling challengesIdResourcesPost");
+        throw "Missing the required parameter 'id' when calling challengesIdResourcesPost";
       }
 
       // verify the required parameter 'body' is set
       if (body == undefined || body == null) {
-        throw new Error("Missing the required parameter 'body' when calling challengesIdResourcesPost");
+        throw "Missing the required parameter 'body' when calling challengesIdResourcesPost";
       }
 
 
@@ -393,7 +500,7 @@
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw new Error("Missing the required parameter 'id' when calling closePrivateContest");
+        throw "Missing the required parameter 'id' when calling closePrivateContest";
       }
 
 
@@ -420,6 +527,92 @@
     }
 
     /**
+     * Callback function to receive the result of the directChallengesGet operation.
+     * @callback module:api/DefaultApi~directChallengesGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2003} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * get challenges
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.filter fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec  + type - Filter by challenge status type, it must be active, past, or draft + creator - Only return challenges created by current user + directProjectId - Filter by direct project id + clientId - Filter by client id + billingId - Filter by billing id + startDateFrom - Left range of the challenge start date  + startDateTo - Right range of the challenge start date + endDateFrom - Left range of the challenge end date + endDateTo - Right range of the challenge end date + challengeType - Filter by challenge type + challengeStatus - Filter by challenge status + challengeTechnologies - Filter by challenge technologies + challengePlatforms - Filter by challenge platforms + directProjectName - Filter by direct project name 
+     * @param {Integer} opts.offset number of items to skip. Defaults to 0
+     * @param {Integer} opts.limit max records to return. Defaults to 10
+     * @param {String} opts.orderBy sort the result by the provided order by clause
+     * @param {module:api/DefaultApi~directChallengesGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2003}
+     */
+    this.directChallengesGet = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'filter': opts['filter'],
+        'offset': opts['offset'],
+        'limit': opts['limit'],
+        'orderBy': opts['orderBy']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['bearer'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = InlineResponse2003;
+
+      return this.apiClient.callApi(
+        '/direct/challenges', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getChallengeTypes operation.
+     * @callback module:api/DefaultApi~getChallengeTypesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ChallengeTypeResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get challenge types
+     * @param {module:api/DefaultApi~getChallengeTypesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ChallengeTypeResponse}
+     */
+    this.getChallengeTypes = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['bearer'];
+      var contentTypes = [];
+      var accepts = [];
+      var returnType = ChallengeTypeResponse;
+
+      return this.apiClient.callApi(
+        '/challenge-types', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the marathonMatcheResultsGet operation.
      * @callback module:api/DefaultApi~marathonMatcheResultsGetCallback
      * @param {String} error Error message, if any.
@@ -428,11 +621,11 @@
      */
 
     /**
-     * Retrieves results for marathon matches.  These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases. 
+     * Retrieves results for marathon matches. These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filter fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + contestId - id of the marathon match + userId - filters by user id 
-     * @param {Number} opts.offset number of items to skip. Defaults to 0
-     * @param {Number} opts.limit max records to return. Defaults to 10
+     * @param {Integer} opts.offset number of items to skip. Defaults to 0
+     * @param {Integer} opts.limit max records to return. Defaults to 10
      * @param {module:api/DefaultApi~marathonMatcheResultsGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse2004}
      */
@@ -469,18 +662,18 @@
      * Callback function to receive the result of the marathonMatchesGet operation.
      * @callback module:api/DefaultApi~marathonMatchesGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2003} data The data returned by the service call.
+     * @param {module:model/InlineResponse2005} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Retrieves marathon matches.  These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases. 
+     * Retrieves marathon matches. These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filter fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + listType - active or past + userId - filters by marathon matches in which the user has a role 
-     * @param {Number} opts.offset number of items to skip. Defaults to 0
-     * @param {Number} opts.limit max records to return. Defaults to 10
+     * @param {Integer} opts.offset number of items to skip. Defaults to 0
+     * @param {Integer} opts.limit max records to return. Defaults to 10
      * @param {module:api/DefaultApi~marathonMatchesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2003}
+     * data is of type: {@link module:model/InlineResponse2005}
      */
     this.marathonMatchesGet = function(opts, callback) {
       opts = opts || {};
@@ -502,7 +695,7 @@
       var authNames = ['bearer'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2003;
+      var returnType = InlineResponse2005;
 
       return this.apiClient.callApi(
         '/marathonMatches', 'GET',
@@ -515,7 +708,7 @@
      * Callback function to receive the result of the membersHandleChallengesGet operation.
      * @callback module:api/DefaultApi~membersHandleChallengesGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2007} data The data returned by the service call.
+     * @param {module:model/InlineResponse2006} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -523,11 +716,11 @@
      * Retrieve Challenges of a particular user handle.
      * @param {String} handle the handle of the user
      * @param {Object} opts Optional parameters
-     * @param {String} opts.filter fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + id - Filter by challenge id, it supports a single id as in id&#x3D;123 or an in filter: id&#x3D;in(123,456) + isPrivate - Filter by private flag, boolean + technologies - Filter by a single technology + platforms - Filter by a single platform + userIds - Filter by a single userId + forumId - Filter by a forum id + reviewType - Filter by review type, values are Internal, peer + status - Active, Completed + subTrack - One of the allowed subTrack Values + track - One of the allowed Track values + hasUserSubmittedForReview - boolean value indicating if user has submitted for review + name - Challenge name + projectId - Filter by Direct project id + projectName - Filter by Direct project name, only available for admin + isTask - Filter type isTask field 
-     * @param {Number} opts.offset number of items to skip. Defaults to 0
-     * @param {Number} opts.limit max records to return. Defaults to 10
+     * @param {String} opts.filter fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + id - Filter by challenge id, it supports a single id as in id&#x3D;123 or an in filter: id&#x3D;in(123,456) + isPrivate - Filter by private flag, boolean + technologies - Filter by a single technology + platforms - Filter by a single platform + userIds - Filter by a single userId + forumId - Filter by a forum id + reviewType - Filter by review type, values are Internal, peer + status - Active, Completed + subTrack - One of the allowed subTrack Values + track - One of the allowed Track values + hasUserSubmittedForReview - boolean value indicating if user has submitted for review + name - Challenge name + projectId - Filter by Direct project id + projectName - Filter by Direct project name, only available for admin + isTask - Filter type isTask field + groupIds - Filter by the group ids, it will only be used and when the API is called with authenticated user.  The value should be ids separated by comma. 
+     * @param {Integer} opts.offset number of items to skip. Defaults to 0
+     * @param {Integer} opts.limit max records to return. Defaults to 10
      * @param {module:api/DefaultApi~membersHandleChallengesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2007}
+     * data is of type: {@link module:model/InlineResponse2006}
      */
     this.membersHandleChallengesGet = function(handle, opts, callback) {
       opts = opts || {};
@@ -535,7 +728,60 @@
 
       // verify the required parameter 'handle' is set
       if (handle == undefined || handle == null) {
-        throw new Error("Missing the required parameter 'handle' when calling membersHandleChallengesGet");
+        throw "Missing the required parameter 'handle' when calling membersHandleChallengesGet";
+      }
+
+
+      var pathParams = {
+        'handle': handle
+      };
+      var queryParams = {
+        'filter': opts['filter'],
+        'offset': opts['offset'],
+        'limit': opts['limit']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['bearer'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = InlineResponse2006;
+
+      return this.apiClient.callApi(
+        '/members/{handle}/challenges', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the membersHandleMmsGet operation.
+     * @callback module:api/DefaultApi~membersHandleMmsGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2007} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve MMs of a particular user handle.
+     * @param {String} handle the handle of the user
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.filter fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + id - Filter by srm id + userIds - Filter by a single userId + forumId - Filter by a forum id + status - Active, Completed + name - MM name + startDate - Start date of particular MM + endDate - End date of particular MM + isRatedForMM - Boolean, indicating is user is rated for this MM 
+     * @param {Integer} opts.offset number of items to skip. Defaults to 0
+     * @param {Integer} opts.limit max records to return. Defaults to 10
+     * @param {module:api/DefaultApi~membersHandleMmsGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2007}
+     */
+    this.membersHandleMmsGet = function(handle, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'handle' is set
+      if (handle == undefined || handle == null) {
+        throw "Missing the required parameter 'handle' when calling membersHandleMmsGet";
       }
 
 
@@ -558,59 +804,6 @@
       var returnType = InlineResponse2007;
 
       return this.apiClient.callApi(
-        '/members/{handle}/challenges', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the membersHandleMmsGet operation.
-     * @callback module:api/DefaultApi~membersHandleMmsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2009} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Retrieve MMs of a particular user handle.
-     * @param {String} handle the handle of the user
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.filter fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + id - Filter by srm id + userIds - Filter by a single userId + forumId - Filter by a forum id + status - Active, Completed + name - MM name + startDate - Start date of particular MM + endDate - End date of particular MM + isRatedForMM - Boolean, indicating is user is rated for this MM 
-     * @param {Number} opts.offset number of items to skip. Defaults to 0
-     * @param {Number} opts.limit max records to return. Defaults to 10
-     * @param {module:api/DefaultApi~membersHandleMmsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2009}
-     */
-    this.membersHandleMmsGet = function(handle, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'handle' is set
-      if (handle == undefined || handle == null) {
-        throw new Error("Missing the required parameter 'handle' when calling membersHandleMmsGet");
-      }
-
-
-      var pathParams = {
-        'handle': handle
-      };
-      var queryParams = {
-        'filter': opts['filter'],
-        'offset': opts['offset'],
-        'limit': opts['limit']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['bearer'];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = InlineResponse2009;
-
-      return this.apiClient.callApi(
         '/members/{handle}/mms', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
@@ -630,8 +823,8 @@
      * @param {String} handle the handle of the user
      * @param {Object} opts Optional parameters
      * @param {String} opts.filter fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + id - Filter by srm id + userIds - Filter by a single userId + forumId - Filter by a forum id + status - Active, Completed + name - SRM name + startDate - Start date of particular SRM + endDate - End date of particular SRM + isRatedForSRM - Boolean, indicating is user is rated for this SRM 
-     * @param {Number} opts.offset number of items to skip. Defaults to 0
-     * @param {Number} opts.limit max records to return. Defaults to 10
+     * @param {Integer} opts.offset number of items to skip. Defaults to 0
+     * @param {Integer} opts.limit max records to return. Defaults to 10
      * @param {module:api/DefaultApi~membersHandleSrmsGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse2008}
      */
@@ -641,7 +834,7 @@
 
       // verify the required parameter 'handle' is set
       if (handle == undefined || handle == null) {
-        throw new Error("Missing the required parameter 'handle' when calling membersHandleSrmsGet");
+        throw "Missing the required parameter 'handle' when calling membersHandleSrmsGet";
       }
 
 
@@ -674,18 +867,18 @@
      * Callback function to receive the result of the phasesGet operation.
      * @callback module:api/DefaultApi~phasesGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2002} data The data returned by the service call.
+     * @param {module:model/InlineResponse2009} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Retrieves phases for dev and design challenges.  These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases. 
+     * Retrieves phases for dev and design challenges. These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filter fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + challengeId - The id of the challenge for which to fetch phases. Supports comma separated list of values to fetch phases for multiple challenges. 
-     * @param {Number} opts.offset number of items to skip. Defaults to 0
-     * @param {Number} opts.limit max records to return. Defaults to 10
+     * @param {Integer} opts.offset number of items to skip. Defaults to 0
+     * @param {Integer} opts.limit max records to return. Defaults to 10
      * @param {module:api/DefaultApi~phasesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2002}
+     * data is of type: {@link module:model/InlineResponse2009}
      */
     this.phasesGet = function(opts, callback) {
       opts = opts || {};
@@ -707,7 +900,7 @@
       var authNames = ['bearer'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2002;
+      var returnType = InlineResponse2009;
 
       return this.apiClient.callApi(
         '/phases', 'GET',
@@ -773,7 +966,7 @@
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw new Error("Missing the required parameter 'id' when calling platformsIdDelete");
+        throw "Missing the required parameter 'id' when calling platformsIdDelete";
       }
 
 
@@ -819,12 +1012,12 @@
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw new Error("Missing the required parameter 'id' when calling platformsIdPatch");
+        throw "Missing the required parameter 'id' when calling platformsIdPatch";
       }
 
       // verify the required parameter 'body' is set
       if (body == undefined || body == null) {
-        throw new Error("Missing the required parameter 'body' when calling platformsIdPatch");
+        throw "Missing the required parameter 'body' when calling platformsIdPatch";
       }
 
 
@@ -869,7 +1062,7 @@
 
       // verify the required parameter 'body' is set
       if (body == undefined || body == null) {
-        throw new Error("Missing the required parameter 'body' when calling platformsPost");
+        throw "Missing the required parameter 'body' when calling platformsPost";
       }
 
 
@@ -895,6 +1088,51 @@
     }
 
     /**
+     * Callback function to receive the result of the registerChallenge operation.
+     * @callback module:api/DefaultApi~registerChallengeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/NormalResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Register for a challenge
+     * @param {Number} id the id of the challenge
+     * @param {module:api/DefaultApi~registerChallengeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/NormalResponse}
+     */
+    this.registerChallenge = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling registerChallenge";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['bearer'];
+      var contentTypes = [];
+      var accepts = [];
+      var returnType = NormalResponse;
+
+      return this.apiClient.callApi(
+        '/challenges/{id}/register', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the saveDraftContest operation.
      * @callback module:api/DefaultApi~saveDraftContestCallback
      * @param {String} error Error message, if any.
@@ -913,7 +1151,7 @@
 
       // verify the required parameter 'body' is set
       if (body == undefined || body == null) {
-        throw new Error("Missing the required parameter 'body' when calling saveDraftContest");
+        throw "Missing the required parameter 'body' when calling saveDraftContest";
       }
 
 
@@ -942,18 +1180,18 @@
      * Callback function to receive the result of the srmResultsGet operation.
      * @callback module:api/DefaultApi~srmResultsGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2006} data The data returned by the service call.
+     * @param {module:model/InlineResponse20010} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Retrieves single round matche results.  These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases. 
+     * Retrieves single round matche results. These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filter fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + userId - filters by srms in which the user has a role + contestId - Id of the srm to return results 
-     * @param {Number} opts.offset number of items to skip. Defaults to 0
-     * @param {Number} opts.limit max records to return. Defaults to 10
+     * @param {Integer} opts.offset number of items to skip. Defaults to 0
+     * @param {Integer} opts.limit max records to return. Defaults to 10
      * @param {module:api/DefaultApi~srmResultsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2006}
+     * data is of type: {@link module:model/InlineResponse20010}
      */
     this.srmResultsGet = function(opts, callback) {
       opts = opts || {};
@@ -975,7 +1213,7 @@
       var authNames = ['bearer'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2006;
+      var returnType = InlineResponse20010;
 
       return this.apiClient.callApi(
         '/srmResults', 'GET',
@@ -988,18 +1226,18 @@
      * Callback function to receive the result of the srmsGet operation.
      * @callback module:api/DefaultApi~srmsGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2005} data The data returned by the service call.
+     * @param {module:model/InlineResponse20011} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Retrieves single round matches.  These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases. 
+     * Retrieves single round matches. These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filter fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + listType - future, active, or past + userId - filters by srms in which the user has a role 
-     * @param {Number} opts.offset number of items to skip. Defaults to 0
-     * @param {Number} opts.limit max records to return. Defaults to 10
+     * @param {Integer} opts.offset number of items to skip. Defaults to 0
+     * @param {Integer} opts.limit max records to return. Defaults to 10
      * @param {module:api/DefaultApi~srmsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2005}
+     * data is of type: {@link module:model/InlineResponse20011}
      */
     this.srmsGet = function(opts, callback) {
       opts = opts || {};
@@ -1021,7 +1259,7 @@
       var authNames = ['bearer'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2005;
+      var returnType = InlineResponse20011;
 
       return this.apiClient.callApi(
         '/srms', 'GET',
@@ -1087,7 +1325,7 @@
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw new Error("Missing the required parameter 'id' when calling technologiesIdDelete");
+        throw "Missing the required parameter 'id' when calling technologiesIdDelete";
       }
 
 
@@ -1133,12 +1371,12 @@
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw new Error("Missing the required parameter 'id' when calling technologiesIdPatch");
+        throw "Missing the required parameter 'id' when calling technologiesIdPatch";
       }
 
       // verify the required parameter 'body' is set
       if (body == undefined || body == null) {
-        throw new Error("Missing the required parameter 'body' when calling technologiesIdPatch");
+        throw "Missing the required parameter 'body' when calling technologiesIdPatch";
       }
 
 
@@ -1183,7 +1421,7 @@
 
       // verify the required parameter 'body' is set
       if (body == undefined || body == null) {
-        throw new Error("Missing the required parameter 'body' when calling technologiesPost");
+        throw "Missing the required parameter 'body' when calling technologiesPost";
       }
 
 
@@ -1203,6 +1441,51 @@
 
       return this.apiClient.callApi(
         '/technologies', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the unregisterChallenge operation.
+     * @callback module:api/DefaultApi~unregisterChallengeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/NormalResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Unregister for a challenge
+     * @param {Number} id the id of the challenge
+     * @param {module:api/DefaultApi~unregisterChallengeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/NormalResponse}
+     */
+    this.unregisterChallenge = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling unregisterChallenge";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['bearer'];
+      var contentTypes = [];
+      var accepts = [];
+      var returnType = NormalResponse;
+
+      return this.apiClient.callApi(
+        '/challenges/{id}/unregister', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

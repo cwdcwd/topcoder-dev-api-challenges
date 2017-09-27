@@ -8,10 +8,14 @@ Method | HTTP request | Description
 [**cancelPrivateContest**](DefaultApi.md#cancelPrivateContest) | **POST** /challenges/{id}/cancel | 
 [**challengeResultsGet**](DefaultApi.md#challengeResultsGet) | **GET** /challengeResults | 
 [**challengesGet**](DefaultApi.md#challengesGet) | **GET** /challenges | 
+[**challengesIdGet**](DefaultApi.md#challengesIdGet) | **GET** /challenges/{id} | 
+[**challengesIdPut**](DefaultApi.md#challengesIdPut) | **PUT** /challenges/{id} | 
 [**challengesIdResourcesDelete**](DefaultApi.md#challengesIdResourcesDelete) | **DELETE** /challenges/{id}/resources | 
 [**challengesIdResourcesGet**](DefaultApi.md#challengesIdResourcesGet) | **GET** /challenges/{id}/resources | 
 [**challengesIdResourcesPost**](DefaultApi.md#challengesIdResourcesPost) | **POST** /challenges/{id}/resources | 
 [**closePrivateContest**](DefaultApi.md#closePrivateContest) | **POST** /challenges/{id}/close | 
+[**directChallengesGet**](DefaultApi.md#directChallengesGet) | **GET** /direct/challenges | 
+[**getChallengeTypes**](DefaultApi.md#getChallengeTypes) | **GET** /challenge-types | 
 [**marathonMatcheResultsGet**](DefaultApi.md#marathonMatcheResultsGet) | **GET** /marathonMatcheResults | 
 [**marathonMatchesGet**](DefaultApi.md#marathonMatchesGet) | **GET** /marathonMatches | 
 [**membersHandleChallengesGet**](DefaultApi.md#membersHandleChallengesGet) | **GET** /members/{handle}/challenges | 
@@ -22,6 +26,7 @@ Method | HTTP request | Description
 [**platformsIdDelete**](DefaultApi.md#platformsIdDelete) | **DELETE** /platforms/{id} | 
 [**platformsIdPatch**](DefaultApi.md#platformsIdPatch) | **PATCH** /platforms/{id} | 
 [**platformsPost**](DefaultApi.md#platformsPost) | **POST** /platforms | 
+[**registerChallenge**](DefaultApi.md#registerChallenge) | **POST** /challenges/{id}/register | 
 [**saveDraftContest**](DefaultApi.md#saveDraftContest) | **POST** /challenges | 
 [**srmResultsGet**](DefaultApi.md#srmResultsGet) | **GET** /srmResults | 
 [**srmsGet**](DefaultApi.md#srmsGet) | **GET** /srms | 
@@ -29,6 +34,7 @@ Method | HTTP request | Description
 [**technologiesIdDelete**](DefaultApi.md#technologiesIdDelete) | **DELETE** /technologies/{id} | 
 [**technologiesIdPatch**](DefaultApi.md#technologiesIdPatch) | **PATCH** /technologies/{id} | 
 [**technologiesPost**](DefaultApi.md#technologiesPost) | **POST** /technologies | 
+[**unregisterChallenge**](DefaultApi.md#unregisterChallenge) | **POST** /challenges/{id}/unregister | 
 
 
 <a name="activateChallenge"></a>
@@ -139,11 +145,11 @@ Name | Type | Description  | Notes
 
 <a name="challengeResultsGet"></a>
 # **challengeResultsGet**
-> InlineResponse2001 challengeResultsGet(opts)
+> InlineResponse200 challengeResultsGet(opts)
 
 
 
-Retrieves results of dev and design challenges.  These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases. 
+Retrieves results of dev and design challenges. These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases.
 
 ### Example
 ```javascript
@@ -160,8 +166,8 @@ var apiInstance = new ApChallengeMicroservice.DefaultApi();
 
 var opts = { 
   'filter': "filter_example", // String | fieldName=fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + userId - filter by challenges in which the user has a role + challengeId - id of the challenge for which to return the results. 
-  'offset': 56, // Number | number of items to skip. Defaults to 0
-  'limit': 56 // Number | max records to return. Defaults to 10
+  'offset': 56, // Integer | number of items to skip. Defaults to 0
+  'limit': 56 // Integer | max records to return. Defaults to 10
 };
 
 var callback = function(error, data, response) {
@@ -179,12 +185,12 @@ apiInstance.challengeResultsGet(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter** | **String**| fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + userId - filter by challenges in which the user has a role + challengeId - id of the challenge for which to return the results.  | [optional] 
- **offset** | **Number**| number of items to skip. Defaults to 0 | [optional] 
- **limit** | **Number**| max records to return. Defaults to 10 | [optional] 
+ **offset** | **Integer**| number of items to skip. Defaults to 0 | [optional] 
+ **limit** | **Integer**| max records to return. Defaults to 10 | [optional] 
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -197,7 +203,7 @@ Name | Type | Description  | Notes
 
 <a name="challengesGet"></a>
 # **challengesGet**
-> InlineResponse200 challengesGet(opts)
+> InlineResponse2001 challengesGet(opts)
 
 
 
@@ -217,9 +223,9 @@ bearer.apiKey = 'YOUR API KEY';
 var apiInstance = new ApChallengeMicroservice.DefaultApi();
 
 var opts = { 
-  'filter': "filter_example", // String | fieldName=fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec  + userId - Filter by user_id + challengeType + challengeName - Challenge Name + challengeId + platforms + technologies + reviewType + prizeLowerBound + prizeUpperBound + submissionEndFrom + submissionEndTo + projectId - Filter by Direct project id + projectName - Filter by Direct project name, only available for admin + isTask - Filter by isTask field 
-  'offset': 56, // Number | number of items to skip. Defaults to 0
-  'limit': 56 // Number | max records to return. Defaults to 10
+  'filter': "filter_example", // String | fieldName=fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec  + userId - Filter by user_id + challengeType + challengeName - Challenge Name + challengeId + platforms + technologies + reviewType + prizeLowerBound + prizeUpperBound + submissionEndFrom + submissionEndTo + projectId - Filter by Direct project id + projectName - Filter by Direct project name, only available for admin + isTask - Filter by isTask field + groupIds - Filter by the group ids, it will only be used and when the API is called with authenticated user.  The value should be ids separated by comma. 
+  'offset': 56, // Integer | number of items to skip. Defaults to 0
+  'limit': 56 // Integer | max records to return. Defaults to 10
 };
 
 var callback = function(error, data, response) {
@@ -236,13 +242,122 @@ apiInstance.challengesGet(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec  + userId - Filter by user_id + challengeType + challengeName - Challenge Name + challengeId + platforms + technologies + reviewType + prizeLowerBound + prizeUpperBound + submissionEndFrom + submissionEndTo + projectId - Filter by Direct project id + projectName - Filter by Direct project name, only available for admin + isTask - Filter by isTask field  | [optional] 
- **offset** | **Number**| number of items to skip. Defaults to 0 | [optional] 
- **limit** | **Number**| max records to return. Defaults to 10 | [optional] 
+ **filter** | **String**| fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec  + userId - Filter by user_id + challengeType + challengeName - Challenge Name + challengeId + platforms + technologies + reviewType + prizeLowerBound + prizeUpperBound + submissionEndFrom + submissionEndTo + projectId - Filter by Direct project id + projectName - Filter by Direct project name, only available for admin + isTask - Filter by isTask field + groupIds - Filter by the group ids, it will only be used and when the API is called with authenticated user.  The value should be ids separated by comma.  | [optional] 
+ **offset** | **Integer**| number of items to skip. Defaults to 0 | [optional] 
+ **limit** | **Integer**| max records to return. Defaults to 10 | [optional] 
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**InlineResponse2001**](InlineResponse2001.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="challengesIdGet"></a>
+# **challengesIdGet**
+> InlineResponse2002 challengesIdGet(id)
+
+
+
+Get challenge details.
+
+### Example
+```javascript
+var ApChallengeMicroservice = require('ap_challenge_microservice');
+var defaultClient = ApChallengeMicroservice.ApiClient.default;
+
+// Configure API key authorization: bearer
+var bearer = defaultClient.authentications['bearer'];
+bearer.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//bearer.apiKeyPrefix = 'Token';
+
+var apiInstance = new ApChallengeMicroservice.DefaultApi();
+
+var id = 3.4; // Number | The challenge id to get the challenge details.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.challengesIdGet(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**| The challenge id to get the challenge details. | 
+
+### Return type
+
+[**InlineResponse2002**](InlineResponse2002.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="challengesIdPut"></a>
+# **challengesIdPut**
+> ChallengeResponse challengesIdPut(id, body)
+
+
+
+Update the challenge
+
+### Example
+```javascript
+var ApChallengeMicroservice = require('ap_challenge_microservice');
+var defaultClient = ApChallengeMicroservice.ApiClient.default;
+
+// Configure API key authorization: bearer
+var bearer = defaultClient.authentications['bearer'];
+bearer.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//bearer.apiKeyPrefix = 'Token';
+
+var apiInstance = new ApChallengeMicroservice.DefaultApi();
+
+var id = 3.4; // Number | The id of the challenge.
+
+var body = new ApChallengeMicroservice.UpdateChallengeBodyParam(); // UpdateChallengeBodyParam | 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.challengesIdPut(id, body, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**| The id of the challenge. | 
+ **body** | [**UpdateChallengeBodyParam**](UpdateChallengeBodyParam.md)|  | 
+
+### Return type
+
+[**ChallengeResponse**](ChallengeResponse.md)
 
 ### Authorization
 
@@ -471,13 +586,120 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+<a name="directChallengesGet"></a>
+# **directChallengesGet**
+> InlineResponse2003 directChallengesGet(opts)
+
+
+
+get challenges
+
+### Example
+```javascript
+var ApChallengeMicroservice = require('ap_challenge_microservice');
+var defaultClient = ApChallengeMicroservice.ApiClient.default;
+
+// Configure API key authorization: bearer
+var bearer = defaultClient.authentications['bearer'];
+bearer.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//bearer.apiKeyPrefix = 'Token';
+
+var apiInstance = new ApChallengeMicroservice.DefaultApi();
+
+var opts = { 
+  'filter': "filter_example", // String | fieldName=fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec  + type - Filter by challenge status type, it must be active, past, or draft + creator - Only return challenges created by current user + directProjectId - Filter by direct project id + clientId - Filter by client id + billingId - Filter by billing id + startDateFrom - Left range of the challenge start date  + startDateTo - Right range of the challenge start date + endDateFrom - Left range of the challenge end date + endDateTo - Right range of the challenge end date + challengeType - Filter by challenge type + challengeStatus - Filter by challenge status + challengeTechnologies - Filter by challenge technologies + challengePlatforms - Filter by challenge platforms + directProjectName - Filter by direct project name 
+  'offset': 56, // Integer | number of items to skip. Defaults to 0
+  'limit': 56 // Integer | max records to return. Defaults to 10
+  'orderBy': "orderBy_example" // String | sort the result by the provided order by clause
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.directChallengesGet(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **String**| fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec  + type - Filter by challenge status type, it must be active, past, or draft + creator - Only return challenges created by current user + directProjectId - Filter by direct project id + clientId - Filter by client id + billingId - Filter by billing id + startDateFrom - Left range of the challenge start date  + startDateTo - Right range of the challenge start date + endDateFrom - Left range of the challenge end date + endDateTo - Right range of the challenge end date + challengeType - Filter by challenge type + challengeStatus - Filter by challenge status + challengeTechnologies - Filter by challenge technologies + challengePlatforms - Filter by challenge platforms + directProjectName - Filter by direct project name  | [optional] 
+ **offset** | **Integer**| number of items to skip. Defaults to 0 | [optional] 
+ **limit** | **Integer**| max records to return. Defaults to 10 | [optional] 
+ **orderBy** | **String**| sort the result by the provided order by clause | [optional] 
+
+### Return type
+
+[**InlineResponse2003**](InlineResponse2003.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getChallengeTypes"></a>
+# **getChallengeTypes**
+> ChallengeTypeResponse getChallengeTypes()
+
+
+
+Get challenge types
+
+### Example
+```javascript
+var ApChallengeMicroservice = require('ap_challenge_microservice');
+var defaultClient = ApChallengeMicroservice.ApiClient.default;
+
+// Configure API key authorization: bearer
+var bearer = defaultClient.authentications['bearer'];
+bearer.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//bearer.apiKeyPrefix = 'Token';
+
+var apiInstance = new ApChallengeMicroservice.DefaultApi();
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getChallengeTypes(callback);
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ChallengeTypeResponse**](ChallengeTypeResponse.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 <a name="marathonMatcheResultsGet"></a>
 # **marathonMatcheResultsGet**
 > InlineResponse2004 marathonMatcheResultsGet(opts)
 
 
 
-Retrieves results for marathon matches.  These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases. 
+Retrieves results for marathon matches. These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases.
 
 ### Example
 ```javascript
@@ -494,8 +716,8 @@ var apiInstance = new ApChallengeMicroservice.DefaultApi();
 
 var opts = { 
   'filter': "filter_example", // String | fieldName=fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + contestId - id of the marathon match + userId - filters by user id 
-  'offset': 56, // Number | number of items to skip. Defaults to 0
-  'limit': 56 // Number | max records to return. Defaults to 10
+  'offset': 56, // Integer | number of items to skip. Defaults to 0
+  'limit': 56 // Integer | max records to return. Defaults to 10
 };
 
 var callback = function(error, data, response) {
@@ -513,8 +735,8 @@ apiInstance.marathonMatcheResultsGet(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter** | **String**| fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + contestId - id of the marathon match + userId - filters by user id  | [optional] 
- **offset** | **Number**| number of items to skip. Defaults to 0 | [optional] 
- **limit** | **Number**| max records to return. Defaults to 10 | [optional] 
+ **offset** | **Integer**| number of items to skip. Defaults to 0 | [optional] 
+ **limit** | **Integer**| max records to return. Defaults to 10 | [optional] 
 
 ### Return type
 
@@ -531,11 +753,11 @@ Name | Type | Description  | Notes
 
 <a name="marathonMatchesGet"></a>
 # **marathonMatchesGet**
-> InlineResponse2003 marathonMatchesGet(opts)
+> InlineResponse2005 marathonMatchesGet(opts)
 
 
 
-Retrieves marathon matches.  These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases. 
+Retrieves marathon matches. These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases.
 
 ### Example
 ```javascript
@@ -552,8 +774,8 @@ var apiInstance = new ApChallengeMicroservice.DefaultApi();
 
 var opts = { 
   'filter': "filter_example", // String | fieldName=fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + listType - active or past + userId - filters by marathon matches in which the user has a role 
-  'offset': 56, // Number | number of items to skip. Defaults to 0
-  'limit': 56 // Number | max records to return. Defaults to 10
+  'offset': 56, // Integer | number of items to skip. Defaults to 0
+  'limit': 56 // Integer | max records to return. Defaults to 10
 };
 
 var callback = function(error, data, response) {
@@ -571,12 +793,12 @@ apiInstance.marathonMatchesGet(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter** | **String**| fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + listType - active or past + userId - filters by marathon matches in which the user has a role  | [optional] 
- **offset** | **Number**| number of items to skip. Defaults to 0 | [optional] 
- **limit** | **Number**| max records to return. Defaults to 10 | [optional] 
+ **offset** | **Integer**| number of items to skip. Defaults to 0 | [optional] 
+ **limit** | **Integer**| max records to return. Defaults to 10 | [optional] 
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -589,7 +811,7 @@ Name | Type | Description  | Notes
 
 <a name="membersHandleChallengesGet"></a>
 # **membersHandleChallengesGet**
-> InlineResponse2007 membersHandleChallengesGet(handle, opts)
+> InlineResponse2006 membersHandleChallengesGet(handle, opts)
 
 
 
@@ -611,9 +833,9 @@ var apiInstance = new ApChallengeMicroservice.DefaultApi();
 var handle = "handle_example"; // String | the handle of the user
 
 var opts = { 
-  'filter': "filter_example", // String | fieldName=fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + id - Filter by challenge id, it supports a single id as in id=123 or an in filter: id=in(123,456) + isPrivate - Filter by private flag, boolean + technologies - Filter by a single technology + platforms - Filter by a single platform + userIds - Filter by a single userId + forumId - Filter by a forum id + reviewType - Filter by review type, values are Internal, peer + status - Active, Completed + subTrack - One of the allowed subTrack Values + track - One of the allowed Track values + hasUserSubmittedForReview - boolean value indicating if user has submitted for review + name - Challenge name + projectId - Filter by Direct project id + projectName - Filter by Direct project name, only available for admin + isTask - Filter type isTask field 
-  'offset': 56, // Number | number of items to skip. Defaults to 0
-  'limit': 56 // Number | max records to return. Defaults to 10
+  'filter': "filter_example", // String | fieldName=fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + id - Filter by challenge id, it supports a single id as in id=123 or an in filter: id=in(123,456) + isPrivate - Filter by private flag, boolean + technologies - Filter by a single technology + platforms - Filter by a single platform + userIds - Filter by a single userId + forumId - Filter by a forum id + reviewType - Filter by review type, values are Internal, peer + status - Active, Completed + subTrack - One of the allowed subTrack Values + track - One of the allowed Track values + hasUserSubmittedForReview - boolean value indicating if user has submitted for review + name - Challenge name + projectId - Filter by Direct project id + projectName - Filter by Direct project name, only available for admin + isTask - Filter type isTask field + groupIds - Filter by the group ids, it will only be used and when the API is called with authenticated user.  The value should be ids separated by comma. 
+  'offset': 56, // Integer | number of items to skip. Defaults to 0
+  'limit': 56 // Integer | max records to return. Defaults to 10
 };
 
 var callback = function(error, data, response) {
@@ -631,13 +853,13 @@ apiInstance.membersHandleChallengesGet(handle, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **handle** | **String**| the handle of the user | 
- **filter** | **String**| fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + id - Filter by challenge id, it supports a single id as in id&#x3D;123 or an in filter: id&#x3D;in(123,456) + isPrivate - Filter by private flag, boolean + technologies - Filter by a single technology + platforms - Filter by a single platform + userIds - Filter by a single userId + forumId - Filter by a forum id + reviewType - Filter by review type, values are Internal, peer + status - Active, Completed + subTrack - One of the allowed subTrack Values + track - One of the allowed Track values + hasUserSubmittedForReview - boolean value indicating if user has submitted for review + name - Challenge name + projectId - Filter by Direct project id + projectName - Filter by Direct project name, only available for admin + isTask - Filter type isTask field  | [optional] 
- **offset** | **Number**| number of items to skip. Defaults to 0 | [optional] 
- **limit** | **Number**| max records to return. Defaults to 10 | [optional] 
+ **filter** | **String**| fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + id - Filter by challenge id, it supports a single id as in id&#x3D;123 or an in filter: id&#x3D;in(123,456) + isPrivate - Filter by private flag, boolean + technologies - Filter by a single technology + platforms - Filter by a single platform + userIds - Filter by a single userId + forumId - Filter by a forum id + reviewType - Filter by review type, values are Internal, peer + status - Active, Completed + subTrack - One of the allowed subTrack Values + track - One of the allowed Track values + hasUserSubmittedForReview - boolean value indicating if user has submitted for review + name - Challenge name + projectId - Filter by Direct project id + projectName - Filter by Direct project name, only available for admin + isTask - Filter type isTask field + groupIds - Filter by the group ids, it will only be used and when the API is called with authenticated user.  The value should be ids separated by comma.  | [optional] 
+ **offset** | **Integer**| number of items to skip. Defaults to 0 | [optional] 
+ **limit** | **Integer**| max records to return. Defaults to 10 | [optional] 
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -650,7 +872,7 @@ Name | Type | Description  | Notes
 
 <a name="membersHandleMmsGet"></a>
 # **membersHandleMmsGet**
-> InlineResponse2009 membersHandleMmsGet(handle, opts)
+> InlineResponse2007 membersHandleMmsGet(handle, opts)
 
 
 
@@ -673,8 +895,8 @@ var handle = "handle_example"; // String | the handle of the user
 
 var opts = { 
   'filter': "filter_example", // String | fieldName=fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + id - Filter by srm id + userIds - Filter by a single userId + forumId - Filter by a forum id + status - Active, Completed + name - MM name + startDate - Start date of particular MM + endDate - End date of particular MM + isRatedForMM - Boolean, indicating is user is rated for this MM 
-  'offset': 56, // Number | number of items to skip. Defaults to 0
-  'limit': 56 // Number | max records to return. Defaults to 10
+  'offset': 56, // Integer | number of items to skip. Defaults to 0
+  'limit': 56 // Integer | max records to return. Defaults to 10
 };
 
 var callback = function(error, data, response) {
@@ -693,12 +915,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **handle** | **String**| the handle of the user | 
  **filter** | **String**| fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + id - Filter by srm id + userIds - Filter by a single userId + forumId - Filter by a forum id + status - Active, Completed + name - MM name + startDate - Start date of particular MM + endDate - End date of particular MM + isRatedForMM - Boolean, indicating is user is rated for this MM  | [optional] 
- **offset** | **Number**| number of items to skip. Defaults to 0 | [optional] 
- **limit** | **Number**| max records to return. Defaults to 10 | [optional] 
+ **offset** | **Integer**| number of items to skip. Defaults to 0 | [optional] 
+ **limit** | **Integer**| max records to return. Defaults to 10 | [optional] 
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -734,8 +956,8 @@ var handle = "handle_example"; // String | the handle of the user
 
 var opts = { 
   'filter': "filter_example", // String | fieldName=fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + id - Filter by srm id + userIds - Filter by a single userId + forumId - Filter by a forum id + status - Active, Completed + name - SRM name + startDate - Start date of particular SRM + endDate - End date of particular SRM + isRatedForSRM - Boolean, indicating is user is rated for this SRM 
-  'offset': 56, // Number | number of items to skip. Defaults to 0
-  'limit': 56 // Number | max records to return. Defaults to 10
+  'offset': 56, // Integer | number of items to skip. Defaults to 0
+  'limit': 56 // Integer | max records to return. Defaults to 10
 };
 
 var callback = function(error, data, response) {
@@ -754,8 +976,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **handle** | **String**| the handle of the user | 
  **filter** | **String**| fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + id - Filter by srm id + userIds - Filter by a single userId + forumId - Filter by a forum id + status - Active, Completed + name - SRM name + startDate - Start date of particular SRM + endDate - End date of particular SRM + isRatedForSRM - Boolean, indicating is user is rated for this SRM  | [optional] 
- **offset** | **Number**| number of items to skip. Defaults to 0 | [optional] 
- **limit** | **Number**| max records to return. Defaults to 10 | [optional] 
+ **offset** | **Integer**| number of items to skip. Defaults to 0 | [optional] 
+ **limit** | **Integer**| max records to return. Defaults to 10 | [optional] 
 
 ### Return type
 
@@ -772,11 +994,11 @@ Name | Type | Description  | Notes
 
 <a name="phasesGet"></a>
 # **phasesGet**
-> InlineResponse2002 phasesGet(opts)
+> InlineResponse2009 phasesGet(opts)
 
 
 
-Retrieves phases for dev and design challenges.  These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases. 
+Retrieves phases for dev and design challenges. These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases.
 
 ### Example
 ```javascript
@@ -793,8 +1015,8 @@ var apiInstance = new ApChallengeMicroservice.DefaultApi();
 
 var opts = { 
   'filter': "filter_example", // String | fieldName=fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + challengeId - The id of the challenge for which to fetch phases. Supports comma separated list of values to fetch phases for multiple challenges. 
-  'offset': 56, // Number | number of items to skip. Defaults to 0
-  'limit': 56 // Number | max records to return. Defaults to 10
+  'offset': 56, // Integer | number of items to skip. Defaults to 0
+  'limit': 56 // Integer | max records to return. Defaults to 10
 };
 
 var callback = function(error, data, response) {
@@ -812,12 +1034,12 @@ apiInstance.phasesGet(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter** | **String**| fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + challengeId - The id of the challenge for which to fetch phases. Supports comma separated list of values to fetch phases for multiple challenges.  | [optional] 
- **offset** | **Number**| number of items to skip. Defaults to 0 | [optional] 
- **limit** | **Number**| max records to return. Defaults to 10 | [optional] 
+ **offset** | **Integer**| number of items to skip. Defaults to 0 | [optional] 
+ **limit** | **Integer**| max records to return. Defaults to 10 | [optional] 
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 
@@ -1037,6 +1259,59 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+<a name="registerChallenge"></a>
+# **registerChallenge**
+> NormalResponse registerChallenge(id)
+
+
+
+Register for a challenge
+
+### Example
+```javascript
+var ApChallengeMicroservice = require('ap_challenge_microservice');
+var defaultClient = ApChallengeMicroservice.ApiClient.default;
+
+// Configure API key authorization: bearer
+var bearer = defaultClient.authentications['bearer'];
+bearer.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//bearer.apiKeyPrefix = 'Token';
+
+var apiInstance = new ApChallengeMicroservice.DefaultApi();
+
+var id = 3.4; // Number | the id of the challenge
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.registerChallenge(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**| the id of the challenge | 
+
+### Return type
+
+[**NormalResponse**](NormalResponse.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 <a name="saveDraftContest"></a>
 # **saveDraftContest**
 > ChallengeResponse saveDraftContest(body)
@@ -1092,11 +1367,11 @@ Name | Type | Description  | Notes
 
 <a name="srmResultsGet"></a>
 # **srmResultsGet**
-> InlineResponse2006 srmResultsGet(opts)
+> InlineResponse20010 srmResultsGet(opts)
 
 
 
-Retrieves single round matche results.  These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases. 
+Retrieves single round matche results. These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases.
 
 ### Example
 ```javascript
@@ -1113,8 +1388,8 @@ var apiInstance = new ApChallengeMicroservice.DefaultApi();
 
 var opts = { 
   'filter': "filter_example", // String | fieldName=fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + userId - filters by srms in which the user has a role + contestId - Id of the srm to return results 
-  'offset': 56, // Number | number of items to skip. Defaults to 0
-  'limit': 56 // Number | max records to return. Defaults to 10
+  'offset': 56, // Integer | number of items to skip. Defaults to 0
+  'limit': 56 // Integer | max records to return. Defaults to 10
 };
 
 var callback = function(error, data, response) {
@@ -1132,12 +1407,12 @@ apiInstance.srmResultsGet(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter** | **String**| fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + userId - filters by srms in which the user has a role + contestId - Id of the srm to return results  | [optional] 
- **offset** | **Number**| number of items to skip. Defaults to 0 | [optional] 
- **limit** | **Number**| max records to return. Defaults to 10 | [optional] 
+ **offset** | **Integer**| number of items to skip. Defaults to 0 | [optional] 
+ **limit** | **Integer**| max records to return. Defaults to 10 | [optional] 
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -1150,11 +1425,11 @@ Name | Type | Description  | Notes
 
 <a name="srmsGet"></a>
 # **srmsGet**
-> InlineResponse2005 srmsGet(opts)
+> InlineResponse20011 srmsGet(opts)
 
 
 
-Retrieves single round matches.  These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases. 
+Retrieves single round matches. These parameters parameters are optional, if none is provided, returns 10 first phases accessible by the user, ordered by createAt date desc, i.e. recent 10 phases.
 
 ### Example
 ```javascript
@@ -1171,8 +1446,8 @@ var apiInstance = new ApChallengeMicroservice.DefaultApi();
 
 var opts = { 
   'filter': "filter_example", // String | fieldName=fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + listType - future, active, or past + userId - filters by srms in which the user has a role 
-  'offset': 56, // Number | number of items to skip. Defaults to 0
-  'limit': 56 // Number | max records to return. Defaults to 10
+  'offset': 56, // Integer | number of items to skip. Defaults to 0
+  'limit': 56 // Integer | max records to return. Defaults to 10
 };
 
 var callback = function(error, data, response) {
@@ -1190,12 +1465,12 @@ apiInstance.srmsGet(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter** | **String**| fieldName&#x3D;fieldValue (enum[string],optional)  - parameter for filtering the fields according to v3 spec + listType - future, active, or past + userId - filters by srms in which the user has a role  | [optional] 
- **offset** | **Number**| number of items to skip. Defaults to 0 | [optional] 
- **limit** | **Number**| max records to return. Defaults to 10 | [optional] 
+ **offset** | **Integer**| number of items to skip. Defaults to 0 | [optional] 
+ **limit** | **Integer**| max records to return. Defaults to 10 | [optional] 
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 
@@ -1405,6 +1680,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TechnologyResponse**](TechnologyResponse.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="unregisterChallenge"></a>
+# **unregisterChallenge**
+> NormalResponse unregisterChallenge(id)
+
+
+
+Unregister for a challenge
+
+### Example
+```javascript
+var ApChallengeMicroservice = require('ap_challenge_microservice');
+var defaultClient = ApChallengeMicroservice.ApiClient.default;
+
+// Configure API key authorization: bearer
+var bearer = defaultClient.authentications['bearer'];
+bearer.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//bearer.apiKeyPrefix = 'Token';
+
+var apiInstance = new ApChallengeMicroservice.DefaultApi();
+
+var id = 3.4; // Number | the id of the challenge
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.unregisterChallenge(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**| the id of the challenge | 
+
+### Return type
+
+[**NormalResponse**](NormalResponse.md)
 
 ### Authorization
 

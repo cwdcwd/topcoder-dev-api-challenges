@@ -9,6 +9,17 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 (function(root, factory) {
@@ -51,7 +62,7 @@
     describe('activateChallenge', function() {
       it('should call activateChallenge successfully', function(done) {
         //uncomment below and update the code to test activateChallenge
-        //instance.activateChallenge(function(error) {
+        //instance.activateChallenge(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -61,7 +72,7 @@
     describe('cancelPrivateContest', function() {
       it('should call cancelPrivateContest successfully', function(done) {
         //uncomment below and update the code to test cancelPrivateContest
-        //instance.cancelPrivateContest(function(error) {
+        //instance.cancelPrivateContest(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -71,7 +82,7 @@
     describe('challengeResultsGet', function() {
       it('should call challengeResultsGet successfully', function(done) {
         //uncomment below and update the code to test challengeResultsGet
-        //instance.challengeResultsGet(function(error) {
+        //instance.challengeResultsGet(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -81,7 +92,27 @@
     describe('challengesGet', function() {
       it('should call challengesGet successfully', function(done) {
         //uncomment below and update the code to test challengesGet
-        //instance.challengesGet(function(error) {
+        //instance.challengesGet(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('challengesIdGet', function() {
+      it('should call challengesIdGet successfully', function(done) {
+        //uncomment below and update the code to test challengesIdGet
+        //instance.challengesIdGet(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('challengesIdPut', function() {
+      it('should call challengesIdPut successfully', function(done) {
+        //uncomment below and update the code to test challengesIdPut
+        //instance.challengesIdPut(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -91,7 +122,7 @@
     describe('challengesIdResourcesDelete', function() {
       it('should call challengesIdResourcesDelete successfully', function(done) {
         //uncomment below and update the code to test challengesIdResourcesDelete
-        //instance.challengesIdResourcesDelete(function(error) {
+        //instance.challengesIdResourcesDelete(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -101,7 +132,7 @@
     describe('challengesIdResourcesGet', function() {
       it('should call challengesIdResourcesGet successfully', function(done) {
         //uncomment below and update the code to test challengesIdResourcesGet
-        //instance.challengesIdResourcesGet(function(error) {
+        //instance.challengesIdResourcesGet(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -111,7 +142,7 @@
     describe('challengesIdResourcesPost', function() {
       it('should call challengesIdResourcesPost successfully', function(done) {
         //uncomment below and update the code to test challengesIdResourcesPost
-        //instance.challengesIdResourcesPost(function(error) {
+        //instance.challengesIdResourcesPost(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -121,7 +152,27 @@
     describe('closePrivateContest', function() {
       it('should call closePrivateContest successfully', function(done) {
         //uncomment below and update the code to test closePrivateContest
-        //instance.closePrivateContest(function(error) {
+        //instance.closePrivateContest(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('directChallengesGet', function() {
+      it('should call directChallengesGet successfully', function(done) {
+        //uncomment below and update the code to test directChallengesGet
+        //instance.directChallengesGet(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getChallengeTypes', function() {
+      it('should call getChallengeTypes successfully', function(done) {
+        //uncomment below and update the code to test getChallengeTypes
+        //instance.getChallengeTypes(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -131,7 +182,7 @@
     describe('marathonMatcheResultsGet', function() {
       it('should call marathonMatcheResultsGet successfully', function(done) {
         //uncomment below and update the code to test marathonMatcheResultsGet
-        //instance.marathonMatcheResultsGet(function(error) {
+        //instance.marathonMatcheResultsGet(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -141,7 +192,7 @@
     describe('marathonMatchesGet', function() {
       it('should call marathonMatchesGet successfully', function(done) {
         //uncomment below and update the code to test marathonMatchesGet
-        //instance.marathonMatchesGet(function(error) {
+        //instance.marathonMatchesGet(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -151,7 +202,7 @@
     describe('membersHandleChallengesGet', function() {
       it('should call membersHandleChallengesGet successfully', function(done) {
         //uncomment below and update the code to test membersHandleChallengesGet
-        //instance.membersHandleChallengesGet(function(error) {
+        //instance.membersHandleChallengesGet(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -161,7 +212,7 @@
     describe('membersHandleMmsGet', function() {
       it('should call membersHandleMmsGet successfully', function(done) {
         //uncomment below and update the code to test membersHandleMmsGet
-        //instance.membersHandleMmsGet(function(error) {
+        //instance.membersHandleMmsGet(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -171,7 +222,7 @@
     describe('membersHandleSrmsGet', function() {
       it('should call membersHandleSrmsGet successfully', function(done) {
         //uncomment below and update the code to test membersHandleSrmsGet
-        //instance.membersHandleSrmsGet(function(error) {
+        //instance.membersHandleSrmsGet(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -181,7 +232,7 @@
     describe('phasesGet', function() {
       it('should call phasesGet successfully', function(done) {
         //uncomment below and update the code to test phasesGet
-        //instance.phasesGet(function(error) {
+        //instance.phasesGet(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -191,7 +242,7 @@
     describe('platformsGet', function() {
       it('should call platformsGet successfully', function(done) {
         //uncomment below and update the code to test platformsGet
-        //instance.platformsGet(function(error) {
+        //instance.platformsGet(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -201,7 +252,7 @@
     describe('platformsIdDelete', function() {
       it('should call platformsIdDelete successfully', function(done) {
         //uncomment below and update the code to test platformsIdDelete
-        //instance.platformsIdDelete(function(error) {
+        //instance.platformsIdDelete(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -211,7 +262,7 @@
     describe('platformsIdPatch', function() {
       it('should call platformsIdPatch successfully', function(done) {
         //uncomment below and update the code to test platformsIdPatch
-        //instance.platformsIdPatch(function(error) {
+        //instance.platformsIdPatch(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -221,7 +272,17 @@
     describe('platformsPost', function() {
       it('should call platformsPost successfully', function(done) {
         //uncomment below and update the code to test platformsPost
-        //instance.platformsPost(function(error) {
+        //instance.platformsPost(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('registerChallenge', function() {
+      it('should call registerChallenge successfully', function(done) {
+        //uncomment below and update the code to test registerChallenge
+        //instance.registerChallenge(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -231,7 +292,7 @@
     describe('saveDraftContest', function() {
       it('should call saveDraftContest successfully', function(done) {
         //uncomment below and update the code to test saveDraftContest
-        //instance.saveDraftContest(function(error) {
+        //instance.saveDraftContest(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -241,7 +302,7 @@
     describe('srmResultsGet', function() {
       it('should call srmResultsGet successfully', function(done) {
         //uncomment below and update the code to test srmResultsGet
-        //instance.srmResultsGet(function(error) {
+        //instance.srmResultsGet(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -251,7 +312,7 @@
     describe('srmsGet', function() {
       it('should call srmsGet successfully', function(done) {
         //uncomment below and update the code to test srmsGet
-        //instance.srmsGet(function(error) {
+        //instance.srmsGet(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -261,7 +322,7 @@
     describe('technologiesGet', function() {
       it('should call technologiesGet successfully', function(done) {
         //uncomment below and update the code to test technologiesGet
-        //instance.technologiesGet(function(error) {
+        //instance.technologiesGet(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -271,7 +332,7 @@
     describe('technologiesIdDelete', function() {
       it('should call technologiesIdDelete successfully', function(done) {
         //uncomment below and update the code to test technologiesIdDelete
-        //instance.technologiesIdDelete(function(error) {
+        //instance.technologiesIdDelete(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -281,7 +342,7 @@
     describe('technologiesIdPatch', function() {
       it('should call technologiesIdPatch successfully', function(done) {
         //uncomment below and update the code to test technologiesIdPatch
-        //instance.technologiesIdPatch(function(error) {
+        //instance.technologiesIdPatch(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -291,7 +352,17 @@
     describe('technologiesPost', function() {
       it('should call technologiesPost successfully', function(done) {
         //uncomment below and update the code to test technologiesPost
-        //instance.technologiesPost(function(error) {
+        //instance.technologiesPost(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('unregisterChallenge', function() {
+      it('should call unregisterChallenge successfully', function(done) {
+        //uncomment below and update the code to test unregisterChallenge
+        //instance.unregisterChallenge(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

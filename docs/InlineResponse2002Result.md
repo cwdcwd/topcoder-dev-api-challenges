@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **success** | **Boolean** |  | [optional] 
-**status** | **Number** |  | [optional] 
+**status** | **Integer** |  | [optional] 
 **metadata** | **Object** |  | [optional] 
-**content** | [**[InlineResponse2002ResultContent]**](InlineResponse2002ResultContent.md) |  | [optional] 
+**content** | [**InlineResponse2002ResultContent**](InlineResponse2002ResultContent.md) |  | [optional] 
 
 

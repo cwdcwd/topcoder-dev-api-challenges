@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**roleId** | **Number** |  | 
-**resourceUserId** | **Number** |  | 
+**roleId** | **Integer** |  | 
+**resourceUserId** | **Integer** |  | 
 **isStudio** | **Boolean** |  | [optional] 
 
 

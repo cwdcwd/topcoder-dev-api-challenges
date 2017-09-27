@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **name** | **String** | the name | [optional] 
 **type** | **String** | the type | [optional] 
 **status** | **String** | the status | [optional] 
+**startDate** | **Date** | the start date ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ) | [optional] 
+**endDate** | **Date** | the end date ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ) | [optional] 
 
 
 <a name="StatusEnum"></a>
