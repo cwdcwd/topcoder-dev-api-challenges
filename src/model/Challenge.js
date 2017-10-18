@@ -204,7 +204,7 @@
    */
   exports.prototype['confidentialityType'] = undefined;
   /**
-   * Technology ID-Name-pairs. See https://api.topcoder.com/v2/data/technologies for full list.
+   * Technology ID-Name-pairs. See https://api.topcoder-dev.com/v2/data/technologies for full list.
    * @member {Array.<module:model/ChallengeTechnologies>} technologies
    */
   exports.prototype['technologies'] = undefined;
@@ -279,7 +279,7 @@
    */
   exports.prototype['round2Info'] = undefined;
   /**
-   * Platform ID-Name-pairs.  See https://api.topcoder.com/v2/data/platforms for full list.
+   * Platform ID-Name-pairs.  See https://api.topcoder-dev.com/v2/data/platforms for full list.
    * @member {Array.<module:model/ChallengeTechnologies>} platforms
    */
   exports.prototype['platforms'] = undefined;

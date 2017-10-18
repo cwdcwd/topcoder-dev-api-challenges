@@ -79,7 +79,7 @@ api.activateChallenge(id, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://api.topcoder.com/v3*
+All URIs are relative to *http://api.topcoder-dev.com/v3*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

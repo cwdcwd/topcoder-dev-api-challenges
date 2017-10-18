@@ -1,5 +1,5 @@
 {
-  "name": "topcoder-api-challenges",
+  "name": "topcoder-dev-api-challenges",
   "version": "1.0.5",
   "description": "Services_that_provide_access_and_interaction_with_all_sorts_of_challenges_including_design_dev_single_round_matches_and_marathon_matches_",
   "license": "ISC",
@@ -21,14 +21,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/cwdcwd/topcoder-api-challenges.git"
+    "url": "git+ssh://git@github.com/cwdcwd/topcoder-dev-api-challenges.git"
   },
   "keywords": [
     "topcoder"
   ],
   "author": "lazybaer",
   "bugs": {
-    "url": "https://github.com/cwdcwd/topcoder-api-challenges/issues"
+    "url": "https://github.com/cwdcwd/topcoder-dev-api-challenges/issues"
   },
-  "homepage": "https://github.com/cwdcwd/topcoder-api-challenges#readme"
+  "homepage": "https://github.com/cwdcwd/topcoder-dev-api-challenges#readme"
 }

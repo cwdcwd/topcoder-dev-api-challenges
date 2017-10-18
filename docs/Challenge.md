@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** | Challenge identifier.  This will be automatically created. | [optional] 
 **confidentialityType** | **String** | Confidentiality type. This will set terms on the challenge. Current options are public or standard_cca (NDA). | [optional] 
-**technologies** | [**[ChallengeTechnologies]**](ChallengeTechnologies.md) | Technology ID-Name-pairs. See https://api.topcoder.com/v2/data/technologies for full list. | [optional] 
+**technologies** | [**[ChallengeTechnologies]**](ChallengeTechnologies.md) | Technology ID-Name-pairs. See https://api.topcoder-dev.com/v2/data/technologies for full list. | [optional] 
 **subTrack** | **String** | the challenge type | [optional] 
 **name** | **String** | The challenge name. | [optional] 
 **reviewType** | **String** | The review type of the challenge.  Setting to COMMUNITY will setup a standard community review with the review board.  INTERNAL will need to be manually assigned. | [optional] 
@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **submissionEndsAt** | **Date** | The end of the submission phase. ISO-8601 formatted date times (YYYY-MM-DDTHH:mm:ss.sssZ) | [optional] 
 **round1Info** | **String** | The info for round one.  Describe what you want submitters to deliver for their checkpoint submissions. | [optional] 
 **round2Info** | **String** | The info for round two. Describe what you want submitters to deliver for their final submissions. | [optional] 
-**platforms** | [**[ChallengeTechnologies]**](ChallengeTechnologies.md) | Platform ID-Name-pairs.  See https://api.topcoder.com/v2/data/platforms for full list. | [optional] 
+**platforms** | [**[ChallengeTechnologies]**](ChallengeTechnologies.md) | Platform ID-Name-pairs.  See https://api.topcoder-dev.com/v2/data/platforms for full list. | [optional] 
 **numberOfCheckpointPrizes** | **Integer** | The number of checkpoint prizes that can be awarded. | [optional] 
 **checkpointPrize** | **Integer** | The checkpoint prize. This amount is the prize for EACH checkpoint winner. | [optional] 
 **finalDeliverableTypes** | [**[ChallengeTechnologies]**](ChallengeTechnologies.md) | Final deliverable type ID-Name-pairs.  Applies to design challenges. | [optional] 
