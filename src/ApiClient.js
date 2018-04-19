@@ -436,6 +436,9 @@
    * @returns An instance of the specified type.
    */
   exports.convertToType = function(data, type) {
+    if(data == null) {
+      return null;
+    }
     switch (type) {
       case 'Boolean':
         return Boolean(data);
